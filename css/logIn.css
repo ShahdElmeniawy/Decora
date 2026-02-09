@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Italiana', serif;
+}
+
+.signup-section {
+    background-color: rgba(50, 63, 7, 0.8);
+    color: #fff;
+    padding: 2rem;
+    font-size: 16px;
+}
+
+.signup-section h1 {
+    font-size: 100px;
+    text-align: center;
+}
+
+.signup-section h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    border-radius: 32px;
+    border: none;
+    border-bottom: 2px #fff solid;
+    margin-top: -10px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0px;
+    margin-bottom: 16px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #fff;
+    background-color: transparent;
+    color: #fff;
+    padding-bottom: 0px;
+    font-size: 18px;
+}
+
+.signup-btn {
+    background-color: #fff;
+    color: #323F07;
+    border-radius: 32px;
+    font-size: 20px;
+
+}
+
+.signup-btn:hover {
+    background-image: linear-gradient(to right, #323F07, #cecece);
+    border: none;
+    color: white;
+}
+
+.image-section {
+    background: url('../images/loginBackground.png') center/cover no-repeat;
+    min-height: 100vh;
+}
+
+.input-group i {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    transform: translateY(-100%);
+
+}
+
+
+@media screen and (max-width: 1024px) {
+    .signup-section {
+        display: flex;
+        position: relative;
+        font-size: 21px;
+        z-index: 2;
+        height: 700px;
+        width: 700px;
+        margin: 120px auto;
+        border-radius: 32px;
+        background-color: rgba(50, 63, 7, 0.57);
+    }
+
+    .form-control {
+        margin-top: -20px;
+        border-bottom: 3px #fff solid;
+    }
+
+    .form-control:focus {
+        padding-bottom: 0px;
+        font-size: 18px;
+    }
+
+    .signup-section h1 {
+        font-size: 70px;
+    }
+
+    .signup-section h3 {
+        font-size: 35px;
+    }
+
+    .image-section {
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .signup-section {
+        height: 550px;
+        width: 300px;
+        margin: 50px auto;
+        font-size: 12px;
+
+    }
+
+    .signup-section h1 {
+        font-size: 50px;
+    }
+
+    .signup-section h3 {
+        font-size: 25px;
+    }
+
+}
+
+
+@media screen and (max-width: 359px) {
+    .signup-section {
+        height: 130vh;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .image-section {
+        height: 130vh;
+    }
+
+}

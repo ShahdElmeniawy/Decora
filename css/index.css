@@ -1,0 +1,20 @@
+ * {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+ }
+
+ .carousel-item img {
+     height: 85%;
+     object-fit: fill;
+ }
+
+ .carousel-item.active {
+     transform: scale(1.2);
+     transition: transform 4s ease;
+ }
+
+ .carousel-item:not(.active) {
+     transform: scale(1);
+     transition: transform 4s ease;
+ }
