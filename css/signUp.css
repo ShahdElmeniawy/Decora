@@ -16,12 +16,12 @@ body {
 }
 
 .signup-section h1 {
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
 }
 
 .signup-section h3 {
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -35,6 +35,9 @@ body {
     color: #fff;
     border-radius: 0px;
     margin-bottom: 16px;
+    padding-bottom: 0px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .form-control:focus {
@@ -43,7 +46,7 @@ body {
     background-color: transparent;
     color: #fff;
     padding-bottom: 0px;
-    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .signup-btn {
@@ -53,6 +56,7 @@ body {
     font-size: 20px;
 
 }
+
 
 .signup-btn:hover {
     background-image: linear-gradient(to right, #323F07, #cecece);
@@ -65,14 +69,55 @@ body {
     min-height: 100vh;
 }
 
-.input-group i {
+.input-group span {
     cursor: pointer;
     position: absolute;
-    right: 10px;
-    transform: translateY(-100%);
-
+    right: 30px;
+    transform: translateY(-20%);
+    z-index: 3;
 }
 
+.input-group {
+    position: relative;
+    z-index: 2;
+}
+
+
+.custom-invalid.is-invalid {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #ff0019;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.custom-invalid.is-invalid:focus {
+    box-shadow: none;
+}
+
+.invalid-feedback {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-style: italic;
+    color: #ff0019;
+}
+
+.toast {
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: white;
+    color: #181f03;
+}
+
+.toast-container {
+    z-index: 10;
+}
+
+.btn-close {
+    filter: invert(0);
+}
 
 @media screen and (max-width: 1024px) {
     .signup-section {
@@ -108,6 +153,14 @@ body {
     .image-section {
         z-index: 1;
         position: absolute;
+        height: 1000px;
+
+    }
+
+    .input-group span {
+        transform: translateY(-100%);
+        right: 35px;
+        font-size: 14px;
     }
 }
 
@@ -118,7 +171,6 @@ body {
         width: 300px;
         margin: 50px auto;
         font-size: 12px;
-
     }
 
     .signup-section h1 {
@@ -129,19 +181,28 @@ body {
         font-size: 25px;
     }
 
-}
+    .image-section {
+        height: 700px;
+    }
 
+    .input-group span {
+        transform: translateY(-100%);
+        right: 35px;
+        font-size: 11px;
+    }
+
+}
 
 @media screen and (max-width: 359px) {
     .signup-section {
-        height: 130vh;
+        min-height: 135vh;
         width: 100%;
         margin: 0;
         border-radius: 0;
     }
 
     .image-section {
-        height: 130vh;
+        min-height: 100vh;
     }
 
 }
