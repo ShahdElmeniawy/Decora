@@ -8,19 +8,19 @@ body {
     font-family: 'Italiana', serif;
 }
 
-.signup-section {
+.logIn-section {
     background-color: rgba(50, 63, 7, 0.8);
     color: #fff;
     padding: 2rem;
     font-size: 16px;
 }
 
-.signup-section h1 {
+.logIn-section h1 {
     font-size: 80px;
     text-align: center;
 }
 
-.signup-section h3 {
+.logIn-section h3 {
     font-size: 26px;
     text-align: center;
     margin-bottom: 30px;
@@ -49,7 +49,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.signup-btn {
+.form-label {
+  font-size: 18px;
+}
+
+.SignIn-btn {
     background-color: #fff;
     color: #323F07;
     border-radius: 32px;
@@ -57,7 +61,7 @@ body {
 }
 
 
-.signup-btn:hover {
+.SignIn-btn:hover {
     background-image: linear-gradient(to right, #323F07, #cecece);
     border: none;
     color: white;
@@ -119,7 +123,7 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-    .signup-section {
+    .logIn-section {
         display: flex;
         position: relative;
         font-size: 21px;
@@ -141,11 +145,14 @@ body {
         font-size: 18px;
     }
 
-    .signup-section h1 {
+    .form-label {
+    font-size: 15px;
+    }
+    .logIn-section h1 {
         font-size: 70px;
     }
 
-    .signup-section h3 {
+    .logIn-section h3 {
         font-size: 35px;
     }
 
@@ -165,19 +172,23 @@ body {
 
 
 @media screen and (max-width: 767px) {
-    .signup-section {
+    .logIn-section {
         height: 550px;
         width: 300px;
         margin: 50px auto;
         font-size: 12px;
     }
 
-    .signup-section h1 {
+    .logIn-section h1 {
         font-size: 50px;
     }
 
-    .signup-section h3 {
+    .logIn-section h3 {
         font-size: 25px;
+    }
+
+    .form-label {
+    font-size: 13px;
     }
 
     .image-section {
@@ -193,7 +204,7 @@ body {
 }
 
 @media screen and (max-width: 359px) {
-    .signup-section {
+    .logIn-section {
         min-height: 135vh;
         width: 100%;
         margin: 0;
@@ -203,5 +214,10 @@ body {
     .image-section {
         min-height: 100vh;
     }
+
+    .form-label {
+    font-size: 13px;
+    }
+
 
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decora Sign In</title>
+    <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/logIn.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div class="toast align-items-center p-3" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Invalid email or password. Please check your credentials and try again
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-0">
+        <div class="col-lg-5 d-flex align-items-center logIn-section">
+            <div class="w-100">
+                <h1 class="mb-4">Decora</h1>
+                <h3 class="mb-3">Sign In</h3>
+                <form id="signInForm">
+
+                    <div>
+                        <label class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email">
+                        <div class="invalid-feedback" id="emailValidation" style="font-size:14px; margin-top:-10px;">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="password">
+                            <span id="togglePassword" class="fa-solid fa-eye" style="color: white;"></span>
+                            <div class="invalid-feedback" id="passwordValidation"
+                                style="font-size:14px; margin-top:-10px;">
+                                Please enter a password.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="terms">
+                        <label class="form-check-label" for="terms">
+                            Remember me 
+                        </label>
+                        
+                    </div>
+                    <button type="submit" class="btn SignIn-btn w-100"> Sign In</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-7 image-section"></div>
+    </div>
+
+
+    <script src="./js/logIn.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- class="position-relative" -->
+<!-- <div class="toast-container position-absolute top-0 end-0 p-3"></div> -->
