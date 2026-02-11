@@ -6,10 +6,94 @@
     <title>Decora</title>
     <link rel="icon" href="./images/logo.png" type="image/x-icon">
     <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/nav.css">
 </head>
 
 <body>
+    <nav class="decora-nav transparent" id="decoraNav">
+        <div class="decora-inner">
+
+            <a href="index.html" class="brand">
+                <!-- <img src="./images/logo.png" alt="Decora Logo" class="brand-logo"> -->
+                <span class="brand-name">DECORA</span>
+            </a>
+
+            <ul class="menu">
+                <li><a class="active" href="#">HOME <span class="chev">›</span></a></li>
+                <li><a href="#">ABOUT <span class="chev">›</span></a></li>
+                <li><a href="#">BLOG <span class="chev">›</span></a></li>
+                <li><a href="#">STORE <span class="chev">›</span></a></li>
+                <li><a href="#">CONTACTS</a></li>
+            </ul>
+
+            <div class="actions">
+                <div class="nav-search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search" aria-label="Search">
+                </div>
+
+
+                <a href="login.html" class="action">
+                    <i class="bi bi-person"></i>
+                    <span>login</span>
+                </a>
+
+                <a href="cart.html" class="action cart">
+                    <i class="bi bi-bag"></i>
+                    <span>cart</span>
+                    <span class="badge">0</span>
+                </a>
+            </div>
+
+            <button class="menu-btn" id="openMenu" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <aside class="menu-panel" id="menuPanel" aria-label="Mobile menu">
+            <div class="panel-top">
+                <div class="panel-brand">
+                    <!-- <img src="./images/logo.png" alt="Decora" /> -->
+                    <div class="panel-name">DECORA</div>
+                </div>
+
+                <button class="close-btn" id="closeMenu" aria-label="Close menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+
+            <nav class="panel-links">
+                <a href="#" class="panel-link active"><span>Home</span><span class="plus">+</span></a>
+                <a href="#" class="panel-link"><span>About</span><span class="plus">+</span></a>
+                <a href="#" class="panel-link"><span>Blog</span><span class="plus">+</span></a>
+                <a href="#" class="panel-link"><span>Store</span><span class="plus">+</span></a>
+                <a href="#" class="panel-link"><span>Contacts</span></a>
+            </nav>
+
+            <div class="panel-icons">
+                <a href="cart.html" class="mini cart-mini" aria-label="Cart">
+                    <i class="bi bi-bag"></i>
+                    <span class="mini-badge">0</span>
+                </a>
+
+                <a href="login.html" class="mini" aria-label="Login">
+                    <i class="bi bi-person"></i>
+                </a>
+            </div>
+
+            <div class="panel-search">
+                <input type="text" placeholder="Search" />
+                <button aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </aside>
+    </div>
+
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -29,8 +113,96 @@
     <button class="btn btn-light" onclick="window.location.href='signUp.html'"
         style="width: 200px; font-size: 30px; background-color: rgba(50, 63, 7, 0.57); color:white; border: none; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; cursor: pointer;">log
         in</button>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quisquam mollitia provident quasi alias vero
+    corrupti voluptatum dolore aliquam ea libero soluta tempore eos voluptate animi explicabo consequuntur consectetur
+    atque a tempora, unde placeat eligendi? Laborum recusandae nostrum ullam neque aliquid, officia voluptates corrupti
+    aut deleniti deserunt ut? Commodi autem voluptatem cum nisi sequi praesentium expedita doloremque. Suscipit vero
+    pariatur sequi! Distinctio optio veniam, ut, iusto saepe consequuntur, illo esse voluptas consectetur dolorum
+    consequatur eos. Ipsum dolores, eligendi ex provident ducimus quas adipisci at expedita magni dolorem rem accusamus
+    repellat perferendis quos amet dolor consectetur possimus corrupti! Possimus a, quam ullam tempora autem
+    exercitationem, vero, quidem debitis consectetur architecto quo optio quas sed dolore qui ipsam odio? Iste deleniti
+    inventore sunt itaque alias distinctio possimus delectus explicabo neque velit nostrum, veritatis, dolores molestias
+    vero pariatur numquam quis facilis, nihil dolore accusamus minima illum saepe cupiditate. Ipsum fuga vero ratione
+    maxime. Nisi animi iure, laborum tempore eos voluptates quod ullam tenetur totam quisquam blanditiis similique
+    eveniet ad illo unde excepturi beatae saepe quos expedita ex quis distinctio suscipit voluptatibus adipisci. Ratione
+    repellendus, accusamus mollitia doloremque laborum ex commodi delectus molestiae. Facere ab voluptas repellendus
+    esse minima, atque delectus officia natus ea!
+    <footer class="decora-footer">
+        <div class="footer-inner">
+
+            
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <!-- <img src="./images/logo.png" alt="Decora" class="footer-logo"> -->
+                    <div class="footer-brand-name">DECORA</div>
+                </div>
+
+                <h2 class="footer-title">
+                    DECORA FOR ELEGANT <br>
+                    INTERIORS
+                </h2>
+
+                <p class="footer-desc">
+                    Modern design pieces and curated collections that blend smoothly into
+                    contemporary living spaces.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-mid">
+                <h3 class="footer-head">EXPLORE</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><span class="arrow">›</span> Home</a></li>
+                    <li><a href="#"><span class="arrow">›</span> About</a></li>
+                    <li><a href="#"><span class="arrow">›</span> Blog</a></li>
+                    <li><a href="#"><span class="arrow">›</span> Store</a></li>
+                    <li><a href="#"><span class="arrow">›</span> Contacts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h3 class="footer-head">CONTACT INFO</h3>
+
+                <div class="info-row">
+                    <div class="info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div class="info-text">
+                        <div class="info-label">CENTRAL OFFICE:</div>
+                        <div class="info-value">Cairo, Egypt</div>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-icon"><i class="bi bi-telephone-fill"></i></div>
+                    <div class="info-text">
+                        <div class="info-label">PHONES:</div>
+                        <div class="info-value">+20 100 000 0000</div>
+                        <div class="info-value">+20 111 111 1111</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <span>Decora © All Rights Reserved - 2025</span>
+                <a href="#" class="purchase-link">Purchase</a>
+            </div>
+        </div>
+
+        <a href="#" class="to-top" aria-label="Back to top">
+            <i class="bi bi-arrow-up"></i>
+        </a>
+    </footer>
 
     <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/nav.js"></script>
 </body>
 
 </html>
