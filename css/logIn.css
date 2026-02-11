@@ -122,6 +122,18 @@ body {
     filter: invert(0);
 }
 
+.link-underline-light {
+    color: #fff !important;     
+    margin-top: 8px !important;  
+    font-size: 18px;
+    padding-top: 15px;
+    text-decoration: underline; 
+}
+
+.new {
+    font-size:18px;
+}
+
 @media screen and (max-width: 1024px) {
     .logIn-section {
         display: flex;
@@ -201,6 +213,13 @@ body {
         font-size: 11px;
     }
 
+    .link-underline-light { 
+    font-size: 15px;
+    }
+
+    .new {
+    font-size:15px;
+    }
 }
 
 @media screen and (max-width: 359px) {
@@ -218,6 +237,11 @@ body {
     .form-label {
     font-size: 13px;
     }
-
-
+    .link-underline-light {
+    font-size: 12px;
+    }
+    .new {
+    font-size:12px;
+    }
 }
+
