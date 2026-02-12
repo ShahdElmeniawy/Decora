@@ -32,3 +32,35 @@ overlay.addEventListener("click", (e) => {
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeMenu();
 });
+
+let logElement = document.getElementById("logBtn");
+let logOutBtn = document.getElementById("logOutBtn")
+let cartCounter = document.getElementById("cartCounter");
+const curUser = JSON.parse(localStorage.getItem("loggedUser"));
+if (curUser) {
+  searchData(curUser.email);
+  logOutBtn.style.display = "block";
+}
+logOutBtn.addEventListener("click", () => {
+  localStorage.removeItem("loggedUser");
+  logElement.innerHTML = "logIn"
+  logOutBtn.style.display = "none";
+  cartCounter.innerHTML = 0;
+
+})
+
+function searchData(email) {
+  let req = new XMLHttpRequest();
+  req.open("GET", `http://localhost:3000/users?email=${email}`);
+  req.send();
+
+  req.addEventListener("readystatechange", function () {
+    if (req.readyState === 4) {
+      if (req.status == 200) {
+        let myData = JSON.parse(req.response);
+        logElement.innerHTML = myData[0].fristName + " " + myData[0].lastName;
+        cartCounter.innerHTML = myData[0].cart.length;
+      }
+    }
+  });
+}

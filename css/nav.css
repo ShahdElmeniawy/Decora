@@ -142,6 +142,10 @@
     position: relative;
 }
 
+#logOutBtn {
+    display: none;
+}
+
 .badge {
     position: absolute;
     right: -14px;
@@ -680,8 +684,8 @@ body.menu-open {
     border-top: 1px solid rgba(255, 255, 255, .08);
     padding: 18px 0;
     position: relative;
-   
-    
+
+
 }
 
 .footer-bottom-inner {

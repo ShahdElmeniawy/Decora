@@ -190,21 +190,70 @@ document.addEventListener('DOMContentLoaded', function () {
 
     signupForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        console.log(firstNameIsValid);
-        console.log(secondNameIsValid);
-        console.log(emailIsValid);
-        console.log(passwordIsvalid);
-        console.log(confirmPasswordIsValid);
-        console.log(checkerIsValid);
         if (firstNameIsValid && secondNameIsValid && emailIsValid && passwordIsvalid && confirmPasswordIsValid && checkerIsValid) {
-            signupForm.reset();
+            postData(firstName.value, lastName.value, email.value, password.value);
         } else {
             const toastEl = document.querySelector('.toast');
             const toast = new bootstrap.Toast(toastEl);
             toast.show();
-            signupForm.reset();
-
         }
     });
+    function searchData(email, callback) {
+        let req = new XMLHttpRequest();
+        req.open("GET", `http://localhost:3000/users?email=${email}`);
+        req.send();
+
+        req.addEventListener("readystatechange", function () {
+            if (req.readyState === 4) {
+                if (req.status == 200) {
+                    let myData = JSON.parse(req.response);
+                    callback(myData.length > 0);
+                } else {
+                    callback(false);
+                }
+            }
+        });
+    }
+
+    function postData(fristName, secondName, email, password) {
+        searchData(email, function (found) {
+            if (found) {
+                const toastE2 = document.querySelectorAll('.toast');
+                const toast = new bootstrap.Toast(toastE2[1]);
+                toast.show();
+                return;
+            }
+
+            let newAccount = {
+                "fristName": fristName,
+                "lastName": secondName,
+                "email": email,
+                "password": password,
+                "role": "user",
+                "cart": []
+            };
+            const loggedUser = {
+                fristName: fristName,
+                lastName: secondName,
+                email: email
+            };
+
+            let req = new XMLHttpRequest();
+            req.open("POST", "http://localhost:3000/users");
+            req.setRequestHeader("Content-Type", "application/json");
+            req.send(JSON.stringify(newAccount));
+
+            req.addEventListener("readystatechange", function () {
+                if (req.readyState === 4) {
+                    if (req.status == 201) {
+                        // log session
+                        localStorage.setItem("loggedUser", JSON.stringify(loggedUser));
+                        window.location.href = 'index.html';
+                    }
+                }
+            });
+        });
+    }
 });
+
 

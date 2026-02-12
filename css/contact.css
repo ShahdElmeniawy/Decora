@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .hero-section {
   position: relative;
 }
@@ -15,17 +21,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color:#323F07;
+  color: #323F07;
 }
 
-.overlay-text h2{
-    font-family: 'italiana';
-    font-weight: bold;
+.overlay-text h2 {
+  font-family: 'italiana';
+  font-weight: bold;
 }
 
 .overlay-text a {
-    text-decoration: none;
-    color: #323F07;
+  text-decoration: none;
+  color: #323F07;
 }
 
 .contact-section {
@@ -38,29 +44,30 @@
 }
 
 .contact-form .btn-danger {
-    background-color: #323F07;
-    border: none;
-    font-weight: bold;
-    padding: 12px;
-    transition: background 0.3s ease;
+  background-color: #323F07;
+  border: none;
+  font-weight: bold;
+  padding: 12px;
+  transition: background 0.3s ease;
 }
 
 .contact-form .btn-danger:hover {
-    background-color: #9CAB84;
+  background-color: #9CAB84;
 }
 
-.info h2,h3 {
-    font-family: 'italiana';
-    font-weight: bold;
-    color: #323F07;
+.info h2,
+h3 {
+  font-family: 'italiana';
+  font-weight: bold;
+  color: #323F07;
 }
 
 .info i {
-    color: #323F07;
+  color: #323F07;
 }
 
 .ifo li {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .map-section iframe {
