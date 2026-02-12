@@ -233,8 +233,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 "cart": []
             };
             const loggedUser = {
-                fristName: fristName,
-                lastName: secondName,
                 email: email
             };
 

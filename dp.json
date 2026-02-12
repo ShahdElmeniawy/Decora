@@ -1,90 +1,99 @@
 {
-    "users": [
-        {
-            "id": "8130",
-            "fristName": "Decora",
-            "lastName": "admin",
-            "email": "decora@gmail.com",
-            "password": "Decora@Admin1",
-            "role": "admin"
-        },
-        {
-            "id": "e873",
-            "fristName": "Shahd",
-            "lastName": "Mohamed",
-            "email": "shahdmohamed@gmail.com",
-            "password": "Decora@Pass1",
-            "role": "user",
-            "cart": [
-                "1",
-                "3",
-                "6"
-            ]
-        },
-        {
-            "id": "f7c4",
-            "fristName": "Shahd",
-            "lastName": "Mohmed",
-            "email": "shahedmohamed180@gmail.com",
-            "password": "asdfASDF1234!@#$",
-            "role": "user",
-            "cart": []
-        },
-        {
-            "id": "eada",
-            "fristName": "Manar",
-            "lastName": "Mohmad",
-            "email": "manar@gmail.com",
-            "password": "Manar@gmail.com123",
-            "role": "user",
-            "cart": []
-        }
-    ],
-    "products": [
-        {
-            "id": "1",
-            "name": "Updated Product",
-            "price": "10000",
-            "description": "An updated product description",
-            "rating": "4.7",
-            "category": "Updated Category",
-            "image": "https://example.com/images/updated_product.jpg"
-        },
-        {
-            "id": "3",
-            "name": "Bed Frame",
-            "price": 400,
-            "description": "A sturdy bed frame for a good night's sleep.",
-            "rating": 4.8,
-            "category": "Bedroom",
-            "image": "https://www.ikea.com/eg/en/images/products/songesand-bed-frame-with-2-storage-boxes-brown__1101593_pe866767_s5.jpg?f=u"
-        },
-        {
-            "id": "4",
-            "name": "Bookshelf",
-            "price": 150,
-            "description": "A spacious bookshelf for your book collection.",
-            "rating": 4.2,
-            "category": "Living Room",
-            "image": "https://www.ikea.com/eg/en/images/products/hemnes-bookcase-black-brown-light-brown__1052040_pe845891_s5.jpg?f=u"
-        },
-        {
-            "id": "6",
-            "name": "Office Chair",
-            "price": 200,
-            "description": "An ergonomic office chair for comfortable work.",
-            "rating": 4.6,
-            "category": "Office",
-            "image": "https://www.ikea.com/eg/en/images/products/flintan-office-chair-with-armrests-black__1121378_pe874225_s5.jpg?f=u"
-        },
-        {
-            "id": "7",
-            "name": "New Product",
-            "price": "250",
-            "description": "A new product description",
-            "rating": "4.3",
-            "category": "New Category",
-            "image": "https://example.com/images/new_product.jpg"
-        }
-    ]
+  "users": [
+    {
+      "id": "8130",
+      "fristName": "Decora",
+      "lastName": "admin",
+      "email": "decora@gmail.com",
+      "password": "Decora@Admin1",
+      "role": "admin"
+    },
+    {
+      "id": "e873",
+      "fristName": "Shahd",
+      "lastName": "Mohamed",
+      "email": "shahdmohamed@gmail.com",
+      "password": "Decora@Pass1",
+      "role": "user",
+      "cart": [
+        "1",
+        "3",
+        "6"
+      ]
+    },
+    {
+      "id": "f7c4",
+      "fristName": "Shahd",
+      "lastName": "Mohmed",
+      "email": "shahedmohamed180@gmail.com",
+      "password": "asdfASDF1234!@#$",
+      "role": "user",
+      "cart": []
+    },
+    {
+      "id": "eada",
+      "fristName": "Manar",
+      "lastName": "Mohmad",
+      "email": "manar@gmail.com",
+      "password": "Manar@gmail.com123",
+      "role": "user",
+      "cart": []
+    },
+    {
+      "id": "1418",
+      "fristName": "Asmaa",
+      "lastName": "Mohmed",
+      "email": "asmaa@gmail.com",
+      "password": "Asmaa@gmail.com1",
+      "role": "user",
+      "cart": []
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Updated Product",
+      "price": "10000",
+      "description": "An updated product description",
+      "rating": "4.7",
+      "category": "Updated Category",
+      "image": "https://example.com/images/updated_product.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Bed Frame",
+      "price": 400,
+      "description": "A sturdy bed frame for a good night's sleep.",
+      "rating": 4.8,
+      "category": "Bedroom",
+      "image": "https://www.ikea.com/eg/en/images/products/songesand-bed-frame-with-2-storage-boxes-brown__1101593_pe866767_s5.jpg?f=u"
+    },
+    {
+      "id": "4",
+      "name": "Bookshelf",
+      "price": 150,
+      "description": "A spacious bookshelf for your book collection.",
+      "rating": 4.2,
+      "category": "Living Room",
+      "image": "https://www.ikea.com/eg/en/images/products/hemnes-bookcase-black-brown-light-brown__1052040_pe845891_s5.jpg?f=u"
+    },
+    {
+      "id": "6",
+      "name": "Office Chair",
+      "price": 200,
+      "description": "An ergonomic office chair for comfortable work.",
+      "rating": 4.6,
+      "category": "Office",
+      "image": "https://www.ikea.com/eg/en/images/products/flintan-office-chair-with-armrests-black__1121378_pe874225_s5.jpg?f=u"
+    },
+    {
+      "id": "7",
+      "name": "New Product",
+      "price": "250",
+      "description": "A new product description",
+      "rating": "4.3",
+      "category": "New Category",
+      "image": "https://example.com/images/new_product.jpg"
+    }
+  ]
 }
