@@ -1,0 +1,25 @@
+{
+  "name": "decora",
+  "version": "1.0.0",
+  "description": "A responsive furniture e-commerce website built using ***HTML, Bootstrap,*** and ***JavaScript,*** with ***JSON Server*** for mock backend data. Features include dynamic product listing, cart functionality, and client-side data handling, optimized for performance and cross-device compatibility.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve-json": "json-server --watch dp.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahdElmeniawy/Decora.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ShahdElmeniawy/Decora/issues"
+  },
+  "homepage": "https://github.com/ShahdElmeniawy/Decora#readme",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.5"
+  }
+}
