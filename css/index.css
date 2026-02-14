@@ -1,20 +1,457 @@
- * {
-     margin: 0px;
-     padding: 0px;
-     box-sizing: border-box;
- }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- .carousel-item img {
-     height: 85%;
-     object-fit: fill;
- }
+body {
+    width: 100%;
+}
 
- .carousel-item.active {
-     transform: scale(1.2);
-     transition: transform 4s ease;
- }
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
 
- .carousel-item:not(.active) {
-     transform: scale(1);
-     transition: transform 4s ease;
- }
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 6s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide.active img {
+    transform: scale(1.15);
+}
+
+.upperPargraph {
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+    opacity: 0;
+    animation: none;
+}
+
+.slide.active .upperPargraph {
+    opacity: 1;
+    animation: fadeMove 1.5s ease forwards;
+}
+
+@keyframes fadeMove {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+}
+
+.slideBtn {
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.activeSlideBtn {
+    background-color: #c8b27a;
+}
+
+.slideControler {
+    position: absolute;
+    top: 250px;
+    right: 150px;
+}
+
+.choose {
+    height: 30px;
+    width: 30px;
+    align-content: center;
+    justify-items: center;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.activeBtn {
+    border: 3px solid #c8b27a;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .choose {
+        height: 44px;
+        width: 44px;
+    }
+}
+
+.secondSection {
+    margin: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+.leftImg {
+    height: 450px;
+    width: 350px;
+}
+
+.right {
+    height: 450px;
+    align-content: center;
+    flex: 1 1 2;
+}
+
+.right p {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    width: 50%;
+}
+
+.right span,
+.right h6 {
+    color: rgba(50, 63, 7, 0.57);
+    font-weight: 500;
+}
+
+.right img {
+    height: 250px;
+    width: 250px;
+    max-width: 100%;
+}
+
+.rightImgs {
+    display: flex;
+    width: 520px;
+    /* width: 100%; */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.secondSection img {
+    display: inline-flex;
+    border-radius: 18px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.secondSection img:hover {
+    transform: translateY(-10px);
+}
+
+.thirdSection {
+    background-color: rgb(24, 33, 29);
+    padding: 20px 0px 100px 0px;
+    justify-items: center;
+    width: 100%;
+}
+
+.cardsTitle {
+    font-size: 100px;
+    color: white;
+}
+
+.roateCardes {
+    display: flex;
+    position: relative;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cards {
+    display: inline-flex;
+    height: 400px;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    cursor: pointer;
+
+}
+
+.cardWord {
+    margin: auto;
+    transform: rotate(-90deg);
+    color: white;
+    font-size: 50px;
+    font-style: italic;
+    top: 100;
+    transition: transform 0.3s ease;
+}
+
+.roateWord {
+    transform: rotate(0deg);
+}
+
+.activeCard {
+    animation: openCard .1s ease forwards;
+}
+
+.imgSection {
+    background-image: url(../images/imgSectionDT.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: top;
+    background-attachment: fixed;
+}
+
+.lastSection {
+    height: 900px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    /* background-color: rgba(236, 236, 236, 0.63); */
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.futuarCard {
+    width: 60%;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    background-color: #c8b27a0e;
+    border-radius: 16px;
+    display: flex;
+    position: relative;
+
+}
+
+.adv p {
+    font-size: 18px;
+    width: 50%;
+    color: darkslategrey;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.adv span {
+    font-weight: bold;
+    color: darkslategrey;
+    font-style: italic;
+
+}
+
+.futuarCard img {
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    width: 450px;
+}
+
+@keyframes openCard {
+    from {
+        width: 200px;
+    }
+
+    to {
+        width: 500px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .carousel {
+        height: 500px;
+    }
+
+    .upperPargraph {
+        font-size: 40px;
+        left: 20px;
+        top: 500px;
+    }
+
+    .slideControler {
+        right: 30px;
+        top: 500px;
+    }
+
+    .secondSection {
+        width: 90%;
+        margin: 30px auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .leftImg,
+    .rightImgs {
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+    }
+
+    .imgSection {
+        background-image: url(../images/imgSectionT.png);
+    }
+
+    .right h6 {
+        width: fit-content;
+        margin: 0 auto 15px auto;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .right p {
+        width: 90%;
+        margin: 0 auto 20px auto;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .cards {
+        width: 350px;
+    }
+
+    .cardWord {
+        transform: rotate(0deg);
+    }
+
+    .roateCardes {
+        justify-content: center;
+        gap: 5px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .adv p {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .lastSection {
+        height: max-content;
+        padding: 50px;
+    }
+
+    .futuarCard {
+        width: 90%;
+        display: block;
+    }
+
+    .futuarCard img {
+        width: 100%;
+        position: static;
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .carousel {
+        height: 400px;
+    }
+
+    .upperPargraph {
+        top: 250px;
+        font-size: 18px;
+    }
+
+    .slideControler {
+        right: 30px;
+        top: 250px;
+    }
+
+    .slideBtn {
+        height: 5px;
+        width: 5px;
+    }
+
+    .choose {
+        height: 20px;
+        width: 20px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        height: auto;
+    }
+
+    .leftImg,
+    .rightImgs {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .leftImg img,
+    .rightImgs img {
+        height: 250px;
+        width: 250px;
+        object-fit: fill
+    }
+
+    .right h6,
+    .right p {
+        font-size: 12px;
+    }
+
+    .imgSection {
+        background-image: url(../images/imgSectionM.png);
+    }
+
+    .cards {
+        width: 250px;
+    }
+
+    .cardsTitle {
+        font-size: 50px;
+    }
+
+    .adv p {
+        font-size: 12px;
+    }
+
+    .lastSection {
+        padding: 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 359px) {
+    .upperPargraph {
+        top: 200px;
+        font-size: 12px;
+    }
+
+    .slideControler {
+        top: 200px;
+    }
+}
