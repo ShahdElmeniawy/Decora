@@ -12,7 +12,6 @@
   display: block;
   width: 100%;
   height: auto;
-  opacity: 80%;
 }
 
 .overlay-text {
@@ -21,7 +20,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #323F07;
+  color: #fff;
 }
 
 .overlay-text h2 {
@@ -31,7 +30,7 @@
 
 .overlay-text a {
   text-decoration: none;
-  color: #323F07;
+  color: #fff;
 }
 
 .contact-section {

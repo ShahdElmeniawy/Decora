@@ -1,0 +1,123 @@
+
+.filtercoulmn
+{
+    background: #F1F3E0;
+    color: #323F07;
+    border: none;
+}
+
+.btnfilter
+{
+    background: #323F07;
+    opacity: 80%;
+    color: #fff;
+}
+
+.btnfilter:hover {
+    background: #84994F;
+    color: #323F07;
+}
+.range::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #323F07, #6c757d);
+    height: 8px;
+    border-radius: 4px;
+}
+
+.range::-webkit-slider-thumb {
+    background: #323F07;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: -6px;
+}
+
+.range::-moz-range-track {
+    background: linear-gradient(to right, #323F07, #6c757d);
+    height: 8px;
+    border-radius: 4px;
+}
+
+.range::-moz-range-thumb {
+    background: #323F07;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.card {
+    box-shadow: 0px 4px 8px rgba(102, 101, 101, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.btn-cart {
+    color: #fff;
+    background-color:#323F07; 
+    border: none;
+}
+
+.btn-cart:hover {
+    background-color: #F1F3E0; 
+}
+
+    .filter-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #323F07;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    cursor: pointer;
+}
+    .filter-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    transition: left 0.3s ease;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+    .filter-overlay.active {
+    left: 0;
+}
+
+    .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
+}
+
+.d-block {
+    height: 300px;
+    background-size: cover;
+    filter: blur(1px);
+}
+
+
+    @media (max-width: 768px) {
+    .filtercoulm {
+    display: none;
+}}
+
