@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Italiana', serif;
+
+}
+
+.d-block {
+    height: 200px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../images/backgroundManagement.jpg);
+    background-size: cover;
+    background-position: center;
+}

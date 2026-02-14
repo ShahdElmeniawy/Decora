@@ -37,15 +37,19 @@ let logElement = document.getElementById("logBtn");
 let logOutBtn = document.getElementById("logOutBtn")
 let cartCounter = document.getElementById("cartCounter");
 const curUser = JSON.parse(localStorage.getItem("loggedUser"));
+let logLink = document.getElementById("logLink");
 if (curUser) {
   searchData(curUser.email);
   logOutBtn.style.display = "block";
+  logLink.href = "./index.html";
 }
 logOutBtn.addEventListener("click", () => {
   localStorage.removeItem("loggedUser");
   logElement.innerHTML = "logIn"
   logOutBtn.style.display = "none";
   cartCounter.innerHTML = 0;
+  window.location.href = "index.html"
+  logLink.href = "./logIn.html";
 
 })
 

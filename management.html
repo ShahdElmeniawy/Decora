@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decora Admin</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/management.css">
+</head>
+
+<body>
+    <nav class="decora-nav transparent" id="decoraNav">
+        <div class="decora-inner">
+
+            <a href="index.html" class="brand">
+                <!-- <img src="./images/logo.png" alt="Decora Logo" class="brand-logo"> -->
+                <span class="brand-name" style="font-family: 'Italiana', serif; font-size: 30px;">Decora</span>
+            </a>
+            <ul class="menu">
+                <li><a href="./admin.html">Dashboard <span class="chev">›</span></a></li>
+                <li><a href="./management.html">Management <span class="chev">›</span></a></li>
+            </ul>
+
+            <div class="actions">
+                <a id="cartCounter"></a>
+
+                <a href="./login.html" class="action" id="logLink">
+                    <i class="bi bi-person"></i>
+                    <span id="logBtn">login</span>
+                </a>
+
+                <a href="#" class="action" id="logOutBtn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>logOut</span>
+                </a>
+            </div>
+
+            <button class="menu-btn" id="openMenu" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <aside class="menu-panel" id="menuPanel" aria-label="Mobile menu">
+            <div class="panel-top">
+                <div class="panel-brand">
+                    <!-- <img src="./images/logo.png" alt="Decora" /> -->
+                    <div class="panel-name" style="font-family: 'Italiana', serif; font-size: 20px;">Decora</div>
+                </div>
+
+                <button class="close-btn" id="closeMenu" aria-label="Close menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+
+            <nav class="panel-links">
+                <a href="./admin.html" class="panel-link"><span>Dashboard</span><span class="plus">+</span></a>
+                <a href="./management.html" class="panel-link"><span>Management</span><span class="plus">+</span></a>
+            </nav>
+
+            <div class="panel-icons">
+                <a id="cartCounter"></a>
+                <a href="./login.html" class="mini" aria-label="Login" id="logLink">
+                    <i class="bi bi-person"></i>
+                </a>
+            </div>
+        </aside>
+    </div>
+    <div class="d-block">
+    </div>
+
+
+    <!-- management code -->
+
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/management.js"></script>
+</body>
+
+</html>
