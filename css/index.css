@@ -116,9 +116,8 @@ body {
 }
 
 .secondSection {
-    margin: 100px;
+    margin: 100px auto;
     display: flex;
-    width: 100%;
     justify-content: center;
     gap: 90px;
     flex-wrap: wrap;
@@ -133,19 +132,20 @@ body {
     height: 450px;
     align-content: center;
     flex: 1 1 2;
+    width: 35%;
 }
 
 .right p {
     font-size: 18px;
     font-style: italic;
     font-weight: 500;
-    width: 50%;
 }
 
 .right span,
 .right h6 {
     color: rgba(50, 63, 7, 0.57);
     font-weight: 500;
+    width: fit-content;
 }
 
 .right img {
@@ -157,7 +157,6 @@ body {
 .rightImgs {
     display: flex;
     width: 520px;
-    /* width: 100%; */
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -255,7 +254,6 @@ body {
     font-size: 18px;
     width: 50%;
     color: darkslategrey;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .adv span {

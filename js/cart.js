@@ -1,10 +1,10 @@
 let cartItemsContainer = document.getElementById("cartItems");
 
 const CART_TAX_RATE = 0.10;
-let discountRate = 0; 
+let discountRate = 0;
 
 function money(n) {
-  return "$" + Number(n).toFixed(2);
+  return Number(n).toFixed(2) + " EGP";
 }
 
 function getLoggedEmail() {
@@ -35,7 +35,7 @@ function getData() {
   const email = getLoggedEmail();
 
   if (!email) {
-    window.location.href = "login.html";
+    window.location.href = "logIn.html";
     return;
   }
 
@@ -270,7 +270,7 @@ if (applyCouponBtn) {
     }
   });
 
- 
+
   const saved = getCouponFromStorage();
   if (saved) {
     discountRate = saved.rate || 0;
@@ -281,3 +281,145 @@ if (applyCouponBtn) {
 }
 
 getData();
+
+
+function detectCardType(number) {
+  if (/^4/.test(number)) return "visa";
+  if (/^5[1-5]/.test(number)) return "mastercard";
+  if (/^3[47]/.test(number)) return "amex";
+  return null;
+}
+
+function validateCardNumber(number) {
+  let sum = 0;
+  let shouldDouble = false;
+
+  for (let i = number.length - 1; i >= 0; i--) {
+    let digit = parseInt(number.charAt(i));
+
+    if (shouldDouble) {
+      digit *= 2;
+      if (digit > 9) digit -= 9;
+    }
+
+    sum += digit;
+    shouldDouble = !shouldDouble;
+  }
+
+  return sum % 10 === 0;
+}
+
+const cardName = document.getElementById("cardName")
+const cardNumber = document.getElementById("cardNumber");
+const expiry = document.getElementById("expiry");
+const cvv = document.getElementById("cvv");
+const form = document.getElementById("paymentForm");
+
+cardNumber.addEventListener("input", function () {
+  const value = this.value.replace(/\s+/g, '');
+
+  document.querySelectorAll(".card-icons img").forEach(img => img.classList.remove("active"));
+  const type = detectCardType(value);
+  if (type) document.getElementById(type).classList.add("active");
+});
+
+let validtion = true;
+
+expiry.addEventListener("input", function () {
+  let currentMonthIndex = new Date().getMonth();
+  let currentYear = new Date().getFullYear();
+  currentMonthIndex += 1;
+  currentYear -= 2000;
+  let value = this.value.replace(/\D/g, '');
+
+  if (value.length >= 1) {
+    let month = value.substring(0, 2);
+
+    if (month.length === 2) {
+      if (parseInt(month) > 12) month = "12";
+      if (parseInt(month) === 0) month = "01";
+    }
+    value = month + value.substring(2, 4);
+  }
+  console.log(currentYear);
+
+  if (value.length > 2) {
+    value = value.substring(0, 2) + "/" + value.substring(2, 4);
+    expiry.classList.remove("is-invalid");
+    validtion = false;
+  }
+  if (value.substring(3, 5) < currentYear || (value.substring(3, 5) == currentYear && value.substring(0, 2) < currentMonthIndex)) {
+    expiry.classList.add("is-invalid");
+    validtion = true;
+  }
+  this.value = value;
+});
+
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let valid = true;
+
+  const number = cardNumber.value.replace(/\s+/g, '');
+
+  const trimmedName = cardName.value.trim();
+
+  if (trimmedName === '' || !/^[A-Za-z]+(?:[-\s'’.][A-Za-z]+)*$/.test(trimmedName)) {
+    cardName.classList.add("is-invalid");
+    valid = false;
+  } else {
+    cardName.classList.remove("is-invalid");
+  }
+
+  if (!validateCardNumber(number) || number === '') {
+    cardNumber.classList.add("is-invalid");
+    valid = false;
+  } else {
+    cardNumber.classList.remove("is-invalid");
+  }
+
+  if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry.value) || validtion) {
+    expiry.classList.add("is-invalid");
+    valid = false;
+  } else {
+    expiry.classList.remove("is-invalid");
+  }
+
+  if (!/^\d{3,4}$/.test(cvv.value)) {
+    cvv.classList.add("is-invalid");
+    valid = false;
+  } else {
+    cvv.classList.remove("is-invalid");
+  }
+
+  if (valid) {
+    const modalElement = document.getElementById('paymentModal');
+    const modal = bootstrap.Modal.getInstance(modalElement);
+    modal.hide();
+    const toastE1 = document.querySelector('.toast');
+    const toast = new bootstrap.Toast(toastE1);
+    toast.show();
+    fixData();
+  }
+
+});
+
+function fixData() {
+  const reqget = new XMLHttpRequest;
+  reqget.open('GET', `http://localhost:3000/users?email=${curUser.email}`);
+  reqget.send();
+  reqget.addEventListener("readystatechange", function () {
+    if (reqget.readyState === 4) {
+      if (reqget.status == 200) {
+        let myUserData = JSON.parse(reqget.response);
+        myUserData[0].cart = [];
+        myUserData[0].orders.at(-1).status = "paid";
+        const regPut = new XMLHttpRequest;
+        regPut.open('PUT', `http://localhost:3000/users/${myUserData[0].id}`);
+        regPut.setRequestHeader("Content-Type", "application/json");
+        regPut.send(JSON.stringify(myUserData[0]));
+      }
+    }
+  })
+}

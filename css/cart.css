@@ -6,9 +6,11 @@
 }
 
 body {
-  background: var(--text);
+  /* background: var(--text); */
   color: var(--text);
   font-family: 'Italiana', serif;
+  background-color: #f4f1ea;
+
 }
 
 .cart-page {
@@ -25,8 +27,10 @@ body {
   margin: 10px 0 22px;
   font-weight: 800;
   letter-spacing: .5px;
+  font-style: italic;
   color: var(--bg);
 }
+
 
 .cart-grid {
   display: grid;
@@ -36,7 +40,7 @@ body {
 
 .cart-items,
 .cart-summary {
-  background: var(--bg);
+  background: linear-gradient(45deg, #1e352a, #13221b, #0d1411, #000000);
   border: 1px solid var(--line);
   border-radius: 18px;
   overflow: hidden;
@@ -56,15 +60,20 @@ body {
 .cart-head {
   display: grid;
   grid-template-columns: 1.2fr .4fr .5fr .4fr;
-  padding: 16px 18px;
+  padding: 16px 18px 16px 50px;
   border-bottom: 1px solid var(--line);
-  font-weight: 700;
-  color: rgba(233, 225, 211, .8);
   flex: 0 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
 }
 
 #cartItems {
   flex: 1;
+  overflow: visible;
+  scroll-behavior: auto;
+  height: fit-content;
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 6px;
@@ -72,19 +81,8 @@ body {
   scroll-padding-bottom: 14px;
 }
 
-@media (min-width: 1025px) {
-  .cart-items {
-    height: 360px;
-  }
-
-  #cartItems::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  #cartItems::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, .12);
-    border-radius: 999px;
-  }
+.cart-summary {
+  height: fit-content
 }
 
 
@@ -108,6 +106,8 @@ body {
   padding: 18px;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, .07);
+  /* border-bottom: .5px solid var(--line); */
+
 }
 
 .item-col {
@@ -228,7 +228,7 @@ body {
 
 .coupon-box input {
   flex: 1;
-  min-width: 180px;
+  min-width: fit-content;
   background: transparent;
   border: 0;
   outline: 0;
@@ -241,13 +241,20 @@ body {
 }
 
 .coupon-box button {
-  border: 1px solid rgba(200, 178, 122, .55);
-  background: rgba(200, 178, 122, .18);
-  color: #fff;
+  border: 1px solid #c6a75e;
+  color: #c6a75e;
+  background: transparent;
   border-radius: 12px;
   padding: 10px 14px;
   font-weight: 800;
+  float: right;
 }
+
+.coupon-box button:hover {
+  background: #c6a75e;
+  color: #13221b;
+}
+
 
 .coupon-msg {
   width: 100%;
@@ -269,15 +276,18 @@ body {
   width: 100%;
   padding: 14px 16px;
   border-radius: 14px;
-  border: 1px solid rgba(200, 178, 122, .55);
-  background: rgba(200, 178, 122, .18);
-  color: #fff;
   font-weight: 800;
   letter-spacing: .5px;
 }
 
+.checkout-btn {
+  background-color: #c6a75e;
+  color: #13221b;
+  border: none;
+}
+
 .checkout-btn:hover {
-  background: rgba(200, 178, 122, .28);
+  background-color: #b8964f;
 }
 
 .empty {
@@ -336,11 +346,39 @@ body {
 
 .d-block {
   height: 300px;
-  /* background-image: linear-gradient(90deg, var(--bg) 0%, rgb(43, 71, 55) 50%, rgb(165, 162, 137) 100%); */
-
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://lumbert.like-themes.com/wp-content/uploads/2025/11/header_contacts.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.card-icons img {
+  width: 50px;
+  margin-right: 10px;
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+.modal-content {
+  color: var(--bg);
+  border-radius: 21px;
+  padding: 16px;
+  font-weight: 600;
+}
+
+.card-icons img.active {
+  opacity: 1;
+}
+
+.toast-container {
+  top: 100px;
+
+}
+
+.toast {
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0px;
 }

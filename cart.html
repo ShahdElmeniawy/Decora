@@ -25,10 +25,12 @@
             </a>
 
             <ul class="menu">
-                <li><a class="active" href="./index.html">HOME <span class="chev">›</span></a></li>
-                <li><a href="./about.html">ABOUT <span class="chev">›</span></a></li>
-                <li><a href="./store.html">STORE <span class="chev">›</span></a></li>
-                <li><a href="./contact.html">CONTACTS <span class="chev">›</span></a></li>
+              
+                <li><a class="active navElements" href="./index.html">HOME <span class="chev">›</span></a></li>
+                <li><a class="navElements" href="./about.html">ABOUT <span class="chev">›</span></a></li>
+                <li><a class="navElements" href="./store.html">STORE <span class="chev">›</span></a></li>
+                <li><a class="navElements" href="./contact.html">CONTACTS <span class="chev">›</span></a></li>
+
             </ul>
 
             <div class="actions">
@@ -38,7 +40,7 @@
                 </div>
 
 
-                <a href="./login.html" class="action" id="logLink">
+                <a href="./logIn.html" class="action" id="logLink">
                     <i class="bi bi-person"></i>
                     <span id="logBtn">login</span>
                 </a>
@@ -50,7 +52,7 @@
 
                 <a href="./cart.html" class="action cart">
                     <i class="bi bi-bag"></i>
-                    <span>cart</span>
+                    <span style="color: #c8b27a;">cart</span>
                     <span class="badge" id="cartCounter">0</span>
                 </a>
             </div>
@@ -87,9 +89,10 @@
                     <span class="mini-badge" id="cartCounter">0</span>
                 </a>
 
-                <a href="./login.html" class="mini" aria-label="Login" id="logLink">
+                <a href="./logIn.html" class="mini" aria-label="Login" id="logLink">
                     <i class="bi bi-person"></i>
                 </a>
+
             </div>
 
             <div class="panel-search">
@@ -153,13 +156,89 @@
                         <span id="grand">EGP 0.00</span>
                     </div>
 
-                    <button class="checkout-btn" id="checkoutBtn" type="button">Check out</button>
-                    <div class="empty" id="checkoutMsg" style="display:none;"></div>
+                    <button type="button" class="btn checkout-btn btn-lg" data-bs-toggle="modal"
+                        data-bs-target="#paymentModal"> Check out</button>
 
                 </aside>
             </div>
         </div>
     </main>
+
+    <div class="toast-container position-fixed end-0 p-3">
+        <div class="toast align-items-center p-3" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" style="color: darkolivegreen;">
+                    Payment completed successfully
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="paymentModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Payment Details</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="paymentForm" novalidate>
+
+                        <div class="card-icons mb-3">
+                            <img src="https://img.icons8.com/color/48/visa.png" id="visa">
+                            <img src="https://img.icons8.com/color/48/mastercard-logo.png" id="mastercard">
+                            <img src="https://img.icons8.com/color/48/amex.png" id="amex">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" required
+                                placeholder="123 4567 8910">
+                            <div class="invalid-feedback">
+                                Invalid card number
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label">Name on Card</label>
+                            <input type="text" class="form-control" id="cardName" placeholder="John Doe">
+                            <div class="invalid-feedback">
+                                Invalid card name
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label class="form-label">Expiry (MM/YY)</label>
+                                <input type="text" class="form-control" id="expiry" required placeholder="12/29">
+                                <div class="invalid-feedback">
+                                    Invalid expiry date
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="cvv" required placeholder="000">
+                                <div class="invalid-feedback">
+                                    Invalid CVV
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success w-100 mt-4" type="submit">
+                            Pay Now
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <footer class="decora-footer">
         <div class="footer-inner">
 
@@ -237,6 +316,7 @@
     <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/payment.js"></script>
 </body>
 
 </html>

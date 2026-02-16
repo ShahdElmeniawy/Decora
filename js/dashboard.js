@@ -27,7 +27,7 @@ function checkAdmin() {
   }
 
   if (!curUser || curUser.email !== "decora@gmail.com") {
-    window.location.href = "login.html";
+    window.location.href = "logIn.html";
     return false;
   }
 

@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/nav.css">
 </head>
+
 <body>
 
     <nav class="decora-nav transparent" id="decoraNav">
@@ -25,10 +26,10 @@
             </a>
 
             <ul class="menu">
-                <li><a class="active" href="./index.html">HOME <span class="chev">›</span></a></li>
-                <li><a href="#">ABOUT <span class="chev">›</span></a></li>
-                <li><a href="./store.html">STORE <span class="chev">›</span></a></li>
-                <li><a href="./contact.html">CONTACTS <span class="chev">›</span></a></li>
+                <li><a class="active navElements" href="./index.html">HOME <span class="chev">›</span></a></li>
+                <li><a class="navElements" href="#">ABOUT <span class="chev">›</span></a></li>
+                <li><a class="navElements" href="./store.html">STORE <span class="chev">›</span></a></li>
+                <li><a class="navElements" href="./contact.html">CONTACTS <span class="chev">›</span></a></li>
             </ul>
 
             <div class="actions">
@@ -38,7 +39,7 @@
                 </div>
 
 
-                <a href="./login.html" class="action" id="logLink">
+                <a href="./logIn.html" class="action" id="logLink">
                     <i class="bi bi-person"></i>
                     <span id="logBtn">login</span>
                 </a>
@@ -48,7 +49,7 @@
                     <span>logOut</span>
                 </a>
 
-                <a href="./cart.html" class="action cart">
+                <a href="./cart.html" class="action cart active navElements">
                     <i class="bi bi-bag"></i>
                     <span>cart</span>
                     <span class="badge" id="cartCounter">0</span>
@@ -87,10 +88,10 @@
                     <span class="mini-badge" id="cartCounter">0</span>
                 </a>
 
-                <a href="./login.html" class="mini" aria-label="Login" id="logLink">
+                <a href="./logIn.html" class="mini" aria-label="Login" id="logLink">
                     <i class="bi bi-person"></i>
                 </a>
-                
+
             </div>
 
             <div class="panel-search">
@@ -107,79 +108,81 @@
             </div>
 
     <div class="container my-4">
-  <div class="row">
-    <div class="col-md-3">
-        <div class="card p-3 shadow-sm filtercoulm">
-        <h5>Filter by Price</h5>
-            <input type="range" class="form-range  range" id="priceRange" min="10000" max="90000" step="1000" value="10000">
-            <p>Selected Price:<span id="priceValue"> 10000</span> EGP</p>
-            <button class="btn w-100 btnfilter" id="filterBtn">FILTER</button>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card p-3 shadow-sm filtercoulm">
+                    <h5>Filter by Price</h5>
+                    <input type="range" class="form-range  range" id="priceRange" min="10000" max="90000" step="1000"
+                        value="10000">
+                    <p>Selected Price:<span id="priceValue"> 10000</span> EGP</p>
+                    <button class="btn w-100 btnfilter" id="filterBtn">FILTER</button>
 
-        <h5 class="mt-4">Product Categories</h5>
-        <div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Bedroom" id="catBedroom">
-                <label class="form-check-label" for="catBedroom">Bedroom</label>
+                    <h5 class="mt-4">Product Categories</h5>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Bedroom" id="catBedroom">
+                            <label class="form-check-label" for="catBedroom">Bedroom</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Table" id="catTable">
+                            <label class="form-check-label" for="catTable">Table</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Chair" id="catchair">
+                            <label class="form-check-label" for="catchair">Chair</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="living" id="catliving">
+                            <label class="form-check-label" for="catliving">Living room</label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Table" id="catTable">
-                <label class="form-check-label" for="catTable">Table</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Chair" id="catchair">
-                <label class="form-check-label" for="catchair">Chair</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="living" id="catliving">
-                <label class="form-check-label" for="catliving">Living room</label>
-            </div>
+
+            <button id="filterToggle" class="filter-btn d-md-none">
+                <i class="bi bi-sliders"></i>
+            </button>
+
+            <div class="col-md-9">
+                <div class="row" id="productsContainer">
+                    <button class="btn btn-cart">Add to Cart</button>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <button id="filterToggle" class="filter-btn d-md-none">
-        <i class="bi bi-sliders"></i>
-    </button>
-
-        <div class="col-md-9">
-            <div class="row" id="productsContainer">
-                <button class="btn btn-cart">Add to Cart</button>
-            </div>
-        </div>
-    </div>
     </div>
 
     <div class="filter-overlay" id="filterOverlay">
-  <div class="card p-3 shadow-sm">
-    <button id="closeFilter" class="close-btn">&times;</button>
-    <h5>Filter by Price</h5>
-    <input type="range" class="form-range range" id="priceRangeMobile" min="10000" max="90000" step="1000" value="10000">
-    <p>Selected Price:<span id="priceValueMobile"> 10000</span> EGP</p>
-    <button class="btn w-100 btnfilter" id="filterBtnMobile">FILTER</button>
+        <div class="card p-3 shadow-sm">
+            <button id="closeFilter" class="close-btn">&times;</button>
+            <h5>Filter by Price</h5>
+            <input type="range" class="form-range range" id="priceRangeMobile" min="10000" max="90000" step="1000"
+                value="10000">
+            <p>Selected Price:<span id="priceValueMobile"> 10000</span> EGP</p>
+            <button class="btn w-100 btnfilter" id="filterBtnMobile">FILTER</button>
 
-    <h5 class="mt-4">Product Categories</h5>
-    <div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="Bedroom" id="catBedroomMobile">
-        <label class="form-check-label" for="catBedroomMobile">Bedroom</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="Table" id="catTableMobile">
-        <label class="form-check-label" for="catTableMobile">Table</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="Chair" id="catChairMobile">
-        <label class="form-check-label" for="catChairMobile">Chair</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="living" id="catLivingMobile">
-        <label class="form-check-label" for="catLivingMobile">Living room</label>
-      </div>
-    </div>
-  </div>
+            <h5 class="mt-4">Product Categories</h5>
+            <div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Bedroom" id="catBedroomMobile">
+                    <label class="form-check-label" for="catBedroomMobile">Bedroom</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Table" id="catTableMobile">
+                    <label class="form-check-label" for="catTableMobile">Table</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Chair" id="catChairMobile">
+                    <label class="form-check-label" for="catChairMobile">Chair</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="living" id="catLivingMobile">
+                    <label class="form-check-label" for="catLivingMobile">Living room</label>
+                </div>
+            </div>
+        </div>
     </div>
 
-<footer class="decora-footer">
+    <footer class="decora-footer">
         <div class="footer-inner">
 
 
@@ -252,7 +255,7 @@
         </a>
     </footer>
 
-    
+
     <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/filter.js"></script>

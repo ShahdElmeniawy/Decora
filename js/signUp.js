@@ -230,7 +230,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 "email": email,
                 "password": password,
                 "role": "user",
-                "cart": []
+                "cart": [],
+                "orders": [],
+                "review": []
             };
             const loggedUser = {
                 email: email

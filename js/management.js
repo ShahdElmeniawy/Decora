@@ -1,6 +1,7 @@
 
 if (!curUser || curUser.email != "decora@gmail.com") {
-  window.location.href = "login.html";
+    window.location.href = "logIn.html"
+}
 }
 function toggleForm() {
   const form = document.getElementById("boxinputitem");
@@ -175,3 +176,4 @@ document.getElementById("btnTable").addEventListener("click", () => loadCategory
 document.getElementById("btnChair").addEventListener("click", () => loadCategory("Chair"));
 document.getElementById("btnLivingroom").addEventListener("click", () => loadCategory("Living Room"));
 document.getElementById("btnbedroom").addEventListener("click", () => loadCategory("Bedroom"));
+
