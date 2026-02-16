@@ -1,8 +1,8 @@
 
 if (!curUser || curUser.email != "decora@gmail.com") {
-    window.location.href = "logIn.html"
+  window.location.href = "logIn.html"
 }
-}
+
 function toggleForm() {
   const form = document.getElementById("boxinputitem");
   form.style.display = (form.style.display === "none") ? "block" : "none";
@@ -14,7 +14,7 @@ function chooseCategory(categoryName) {
   document.getElementById("categoryBtn").textContent = categoryName;
 }
 
-document.getElementById("boxinputitem").addEventListener("submit", function(e) {
+document.getElementById("boxinputitem").addEventListener("submit", function (e) {
   e.preventDefault();
 
   document.querySelectorAll(".error-msg").forEach(el => el.remove());
@@ -28,7 +28,7 @@ document.getElementById("boxinputitem").addEventListener("submit", function(e) {
     error.className = "error-msg text-danger";
     error.textContent = message;
     input.parentNode.appendChild(error);
-    input.classList.add("is-invalid"); 
+    input.classList.add("is-invalid");
     valid = false;
   }
 
@@ -37,34 +37,37 @@ document.getElementById("boxinputitem").addEventListener("submit", function(e) {
   const description = document.getElementById("descrip").value.trim();
   const price = document.getElementById("prise").value.trim();
   const image = document.getElementById("imaginput").value.trim();
+  const onStock = document.getElementById("onStockElement").value.trim();
 
-  if (!id || isNaN(id)) showError("Numirc", "Enter the ID number");  
+  if (!id || isNaN(id)) showError("Numirc", "Enter the ID number");
   if (!name) showError("nameOfprodct", "Name required");
-  if (!description) showError("descrip","Add a description");
+  if (!description) showError("descrip", "Add a description");
   if (!price || isNaN(price) || price <= 0) showError("prise", "Add a price");
   if (!image || !image.startsWith("http")) showError("imaginput", "Enter a valid image URL starting with http");
+  if (!onStock || isNaN(onStock) || onStock <= 0) showError("onStockElement", "Name required");
+
 
   if (!currentCategory) {
     const btn = document.getElementById("categoryBtn");
     const error = document.createElement("small");
     error.className = "error-msg text-danger";
     error.textContent = "Choose a category";
-    btn.parentNode.appendChild(error); 
+    btn.parentNode.appendChild(error);
     valid = false;
   }
 
-  ["Numirc", "nameOfprodct", "descrip", "prise", "imaginput", "categoryBtn"].forEach(id => {
+  ["Numirc", "nameOfprodct", "descrip", "prise", "onStockElement", "imaginput", "categoryBtn"].forEach(id => {
     const input = document.getElementById(id);
-    input.addEventListener("input", function() {
+    input.addEventListener("input", function () {
       const error = input.parentNode.querySelector(".error-msg");
-      if (error) error.remove();         
+      if (error) error.remove();
       input.classList.remove("is-invalid");
     });
   });
 
   if (!valid) return;
 
-  const product = { id, name, description, price, image, category: currentCategory };
+  const product = { id, name, description, price, image, category: currentCategory, onStock };
   const btn = document.getElementById("btnAddItem");
 
   if (btn.dataset.mode === "edit") {
@@ -80,11 +83,11 @@ document.getElementById("boxinputitem").addEventListener("submit", function(e) {
     xhr.send(JSON.stringify(product));
   }
 
-  xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4 && xhr.status === 200) {
-    document.getElementById("successMsg").textContent = "Product saved successfully!";
-  }
-};
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      document.getElementById("successMsg").textContent = "Product saved successfully!";
+    }
+  };
 
 
   e.target.reset();
@@ -100,6 +103,10 @@ function hideForm() {
   document.getElementById("boxinputitem").style.display = "none";
 }
 
+function hideDefult() {
+  document.getElementById("defultCardsContainer").style = "none";
+}
+
 function deleteProduct(productId) {
   if (!confirm("Are you sure you want to delete this product?")) {
     return;
@@ -107,7 +114,7 @@ function deleteProduct(productId) {
 
   var xhr = new XMLHttpRequest();
   xhr.open("DELETE", "http://localhost:3000/products/" + productId, true);
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var card = document.querySelector('[data-id="' + productId + '"]');
       if (card) {
@@ -121,13 +128,14 @@ function deleteProduct(productId) {
 function openEditForm(product) {
   const form = document.getElementById("boxinputitem");
   form.style.display = "block";
-
   document.getElementById("Numirc").value = product.id;
   document.getElementById("nameOfprodct").value = product.name;
   document.getElementById("descrip").value = product.description;
   document.getElementById("prise").value = product.price;
   document.getElementById("imaginput").value = product.image;
   document.getElementById("categoryBtn").textContent = product.category;
+  currentCategory = product.category;
+  document.getElementById("onStockElement").value = product.onStock;
 
   const btn = document.getElementById("btnAddItem");
   btn.textContent = "Edit";
@@ -159,21 +167,36 @@ function renderCards(products) {
   });
 }
 
-function loadCategory(categoryName) { 
-  hideForm(); 
-  var xhr = new XMLHttpRequest(); 
+function loadCategory(categoryName) {
+  hideForm();
+  hideDefult()
+  var xhr = new XMLHttpRequest();
   xhr.open("GET", "http://localhost:3000/products?category=" + encodeURIComponent(categoryName), true);
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) { 
-      var data = JSON.parse(xhr.responseText); 
-      renderCards(data); 
-    } 
-  }; 
-  xhr.send(null); 
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var data = JSON.parse(xhr.responseText);
+      renderCards(data);
+    }
+  };
+  xhr.send(null);
 }
 
+function loadDefultCategory() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "http://localhost:3000/products");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var data = JSON.parse(xhr.responseText);
+      renderCards(data);
+    }
+  };
+  xhr.send(null);
+}
+
+document.getElementById("allCategories").addEventListener("click", () => loadDefultCategory());
 document.getElementById("btnTable").addEventListener("click", () => loadCategory("Table"));
 document.getElementById("btnChair").addEventListener("click", () => loadCategory("Chair"));
 document.getElementById("btnLivingroom").addEventListener("click", () => loadCategory("Living Room"));
 document.getElementById("btnbedroom").addEventListener("click", () => loadCategory("Bedroom"));
+loadDefultCategory()
 

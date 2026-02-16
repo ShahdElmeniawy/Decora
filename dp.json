@@ -95,7 +95,9 @@
       "email": "shahedmohamed180@gmail.com",
       "password": "asdfASDF1234!@#$",
       "role": "user",
-      "cart": [],
+      "cart": [
+        "2611"
+      ],
       "orders": [
         {
           "id": "ORD-2001",
@@ -140,6 +142,22 @@
           "subtotal": 235000,
           "tax": 23500,
           "grandTotal": 258500,
+          "currency": "EGP"
+        },
+        {
+          "status": "pending",
+          "createdAt": "Mon Feb 16 2026 19:21:53 GMT+0200 (Eastern European Standard Time)",
+          "items": [
+            {
+              "productId": "2611",
+              "qty": 1,
+              "unitPrice": 60000,
+              "lineTotal": 60000
+            }
+          ],
+          "subtotal": 60000,
+          "tax": 6000,
+          "grandTotal": 66000,
           "currency": "EGP"
         }
       ],
@@ -209,6 +227,12 @@
           "rate": 3.9,
           "comment": "Delany Couch is simple and modern, but the cushions could use more support.",
           "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2611",
+          "date": "2026-02-16",
+          "rate": 4,
+          "comment": "Developers of this site so smart"
         }
       ]
     },
@@ -219,32 +243,6 @@
       "email": "sohilaahmed884@gmail.com",
       "password": "Sohila@123",
       "role": "user",
-      "review": [
-        {
-          "productId": "2610",
-          "rate": 5,
-          "comment": "Best purchase of the year.",
-          "date": "Mon Feb 16 2026"
-        },
-        {
-          "productId": "2614",
-          "rate": 4.2,
-          "comment": "RetroFunk Chair adds a bold statement to my room. Very eye-catching.",
-          "date": "Mon Feb 16 2026"
-        },
-        {
-          "productId": "2620",
-          "rate": 4.7,
-          "comment": "R1 Bedside table is elegant and well-built. Exactly what I wanted.",
-          "date": "Mon Feb 16 2026"
-        },
-        {
-          "productId": "2624",
-          "rate": 4.5,
-          "comment": "Mindy Dining Chair is both comfortable and stylish, love the rope detail.",
-          "date": "Mon Feb 16 2026"
-        }
-      ],
       "cart": [],
       "orders": [
         {
@@ -298,6 +296,54 @@
           "tax": 6500,
           "grandTotal": 71500,
           "currency": "EGP"
+        },
+        {
+          "status": "paid",
+          "createdAt": "Mon Feb 16 2026 17:32:44 GMT+0200 (Eastern European Standard Time)",
+          "items": [
+            {
+              "productId": "2611",
+              "qty": 2,
+              "unitPrice": 60000,
+              "lineTotal": 120000
+            },
+            {
+              "productId": "2612",
+              "qty": 1,
+              "unitPrice": 35000,
+              "lineTotal": 35000
+            }
+          ],
+          "subtotal": 60000,
+          "tax": 6000,
+          "grandTotal": 66000,
+          "currency": "EGP"
+        }
+      ],
+      "review": [
+        {
+          "productId": "2610",
+          "rate": 5,
+          "comment": "Best purchase of the year.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2614",
+          "rate": 4.2,
+          "comment": "RetroFunk Chair adds a bold statement to my room. Very eye-catching.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2620",
+          "rate": 4.7,
+          "comment": "R1 Bedside table is elegant and well-built. Exactly what I wanted.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2624",
+          "rate": 4.5,
+          "comment": "Mindy Dining Chair is both comfortable and stylish, love the rope detail.",
+          "date": "Mon Feb 16 2026"
         }
       ]
     }
@@ -321,7 +367,7 @@
       "rating": "4.0",
       "category": "Bedroom",
       "image": "https://elance.me/cdn/shop/files/SlideBed.jpg?v=1749551743&width=1000",
-       "onStock": "3"
+      "onStock": "3"
     },
     {
       "id": "2612",
@@ -331,8 +377,7 @@
       "rating": "4.0",
       "category": "Living Room",
       "image": "https://elance.me/cdn/shop/files/3_16.png?v=1749773305&width=1200",
-       "onStock": "20"
-
+      "onStock": "20"
     },
     {
       "id": "2613",
@@ -342,7 +387,7 @@
       "rating": "4.0",
       "category": "Living Room",
       "image": "https://elance.me/cdn/shop/files/p_6.png?v=1749771582&width=1200",
-       "onStock": "6"
+      "onStock": "6"
     },
     {
       "id": "2614",
@@ -352,7 +397,7 @@
       "rating": "4.3",
       "category": "Living Room",
       "image": "https://elance.me/cdn/shop/files/Retrofunk_chair.png?v=1723760606&width=1200",
-       "onStock": "24"
+      "onStock": "24"
     },
     {
       "id": "2615",
@@ -362,7 +407,7 @@
       "rating": "4.8",
       "category": "Living Room",
       "image": "https://elance.me/cdn/shop/files/Moon2Seaters.jpg?v=1749564989&width=1000",
-     "onStock": "16"
+      "onStock": "16"
     },
     {
       "id": "2616",
@@ -372,17 +417,16 @@
       "rating": "4.5",
       "category": "Living Room",
       "image": "https://elance.me/cdn/shop/files/325_U.jpg?v=1749548619&width=1000",
-       "onStock": "8"
+      "onStock": "8"
     },
     {
       "id": "2617",
       "name": "C1 Bedside table",
-      "price": 20000,
       "description": "Made with natural veneer and soft synthetic leather accents for a smooth, elegant look.",
-      "rating": "4.0",
-      "category": "Table",
+      "price": "20000",
       "image": "https://elance.me/cdn/shop/files/2_0992a240-3a63-429a-914b-baa88a66426c.png?v=1749552589&width=1200",
-       "onStock": "17"
+      "category": "Table",
+      "onStock": "17"
     },
     {
       "id": "2618",
@@ -392,7 +436,7 @@
       "rating": "4.0",
       "category": "Table",
       "image": "https://elance.me/cdn/shop/files/2_f91872b2-abc7-4997-82c8-6373102956d1.png?v=1749560951&width=1200",
-       "onStock": "25"
+      "onStock": "25"
     },
     {
       "id": "2619",
@@ -402,7 +446,7 @@
       "rating": "4.3",
       "category": "Table",
       "image": "https://elance.me/cdn/shop/files/2_fda0bf6d-1eaa-4267-b5cf-0588c9e71763.png?v=1749552482&width=1200",
-       "onStock": "14"
+      "onStock": "14"
     },
     {
       "id": "2620",
@@ -412,7 +456,7 @@
       "rating": "4.5",
       "category": "Table",
       "image": "https://elance.me/cdn/shop/files/2_06514c45-01af-43f6-ae38-4505e52df137.png?v=1749552285&width=1200",
-       "onStock": "24"
+      "onStock": "24"
     },
     {
       "id": "2621",
@@ -422,7 +466,7 @@
       "rating": "4.5",
       "category": "Chair",
       "image": "https://elance.me/cdn/shop/files/p_eb96420c-6da0-4c08-a3b0-d64b07441afc.png?v=1742145684&width=1200",
-       "onStock": "5"
+      "onStock": "5"
     },
     {
       "id": "2622",
@@ -432,7 +476,7 @@
       "rating": "4.5",
       "category": "Chair",
       "image": "https://elance.me/cdn/shop/files/creamboucle-104_75e56305-4640-4443-81b6-bcd1c6361384.png?v=1760563236&width=1200",
-       "onStock": "7"
+      "onStock": "7"
     },
     {
       "id": "2623",
@@ -442,7 +486,7 @@
       "rating": "4.8",
       "category": "Chair",
       "image": "https://elance.me/cdn/shop/files/HideChair.jpg?v=1749564672&width=1000",
-       "onStock": "2"
+      "onStock": "2"
     },
     {
       "id": "2624",
@@ -452,7 +496,7 @@
       "rating": "4.7",
       "category": "Chair",
       "image": "https://elance.me/cdn/shop/files/104_314bfbd5-9dfb-4a50-a8fa-e60cd43c1e3a.png?v=1760565948&width=1200",
-       "onStock": "17"
+      "onStock": "17"
     },
     {
       "id": "2625",
@@ -462,7 +506,7 @@
       "rating": "4.8",
       "category": "Chair",
       "image": "https://elance.me/cdn/shop/files/104_7d983387-da21-4c69-9a68-5fb2d9c12770.png?v=1760562830&width=1200",
-       "onStock": "14"
+      "onStock": "14"
     },
     {
       "id": "2626",
@@ -472,7 +516,7 @@
       "rating": "3.5",
       "category": "Living Room",
       "image": "https://elance.me/cdn/shop/files/olivegreenvelvet.png?v=1760539926&width=1200",
-       "onStock": "16"
+      "onStock": "16"
     },
     {
       "id": "2627",
@@ -482,7 +526,7 @@
       "rating": "3.7",
       "category": "Living Room",
       "image": "https://elance.me/cdn/shop/files/Delany_Couch_5b563158-3c4c-4716-8e55-879943b897a6.png?v=1723846377&width=1200",
-       "onStock": "22"
+      "onStock": "22"
     },
     {
       "id": "2628",
@@ -492,7 +536,7 @@
       "rating": "4.0",
       "category": "Chair",
       "image": "https://elance.me/cdn/shop/files/p_-_Muted_Sage_Green.png?v=1748872880&width=1200",
-       "onStock": "12"
+      "onStock": "12"
     },
     {
       "id": "2629",
@@ -502,7 +546,7 @@
       "rating": "3.5",
       "category": "Table",
       "image": "https://elance.me/cdn/shop/files/WhatsApp_Image_2025-12-14_at_5.40.54_PM.jpg?v=1765984013&width=1200",
-       "onStock": "27"
+      "onStock": "27"
     },
     {
       "id": "2630",
@@ -512,7 +556,7 @@
       "rating": "3.0",
       "category": "Table",
       "image": "https://elance.me/cdn/shop/files/geometriccoffeetable.png?v=1748971703&width=1200",
-       "onStock": "6"
+      "onStock": "6"
     }
   ]
 }

@@ -25,10 +25,12 @@ body {
     padding: 20px;
     color: #fff;
     font-size: 18px;
-    opacity: 90%;
 }
 
-.tble, .chir, .beeedroom, .livingRoom {
+.tble,
+.chir,
+.beeedroom,
+.livingRoom {
     border-bottom: 1px solid #fff;
     padding: 10px;
     cursor: pointer;
@@ -42,7 +44,7 @@ input {
     font-family: sans-serif;
 }
 
-.add-Item{
+.add-Item {
     text-align: left;
     font-size: 20px;
     color: #0f1412;
@@ -79,6 +81,9 @@ input {
 .cardmange {
     font-family: sans-serif;
     transition: transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 0px 15px 15px 15px;
+    border-radius: 21px;
 }
 
 .cardmange:hover {
@@ -92,24 +97,23 @@ input {
 }
 
 .editBtn {
-  background-color: #0f1412 !important;
-  color: #fff !important;
-  padding: 5px 10px;
-  border-radius: 4px;
-  border: none;
-  width: 45%;
+    background-color: #0f1412 !important;
+    color: #fff !important;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    width: 45%;
 }
 
 .editBtn:hover {
-    background-color: darkslategrey !important; 
+    background-color: darkslategrey !important;
 }
 
 .delBtn {
-  background-color: #EDA35A !important;
-  color: #fff !important;
-  padding: 5px 10px;
-  border-radius: 4px;
+    background-color: #EDA35A !important;
+    color: #fff !important;
+    padding: 5px 10px;
+    border-radius: 4px;
     border: none;
     width: 48%;
 }
-
