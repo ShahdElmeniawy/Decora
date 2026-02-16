@@ -1,78 +1,140 @@
 {
-  "users": [
-    {
-      "id": "8130",
-      "fristName": "Decora",
-      "lastName": "admin",
-      "email": "decora@gmail.com",
-      "password": "Decora@Admin1",
-      "role": "admin",
-      "cart": []
-    },
-    {
-      "id": "e873",
-      "fristName": "Shahd",
-      "lastName": "Mohamed",
-      "email": "shahdmohamed@gmail.com",
-      "password": "Decora@Pass1",
-      "role": "user",
-      "cart": [
-        "1",
-        "3",
-        "6"
-      ]
-    },
-    {
-      "id": "f7c4",
-      "fristName": "Shahd",
-      "lastName": "Mohmed",
-      "email": "shahedmohamed180@gmail.com",
-      "password": "asdfASDF1234!@#$",
-      "role": "user",
-      "cart": []
-    },
-    {
-      "id": "eada",
-      "fristName": "Manar",
-      "lastName": "Mohmad",
-      "email": "manar@gmail.com",
-      "password": "Manar@gmail.com123",
-      "role": "user",
-      "cart": []
-    },
-    {
-      "id": "e588",
-      "fristName": "Sohila",
-      "lastName": "Ahmed",
-      "email": "sohilaahmed884@gmail.com",
-      "password": "Sohila@123",
-      "role": "user",
-      "cart": [
-        "2616",
-        "2610",
-        "2620",
-        "2628"
-      ],
-      "history": [
-        [
-          "2628",
-          "paid"
+ "users": [
+  {
+    "id": "8130",
+    "fristName": "Decora",
+    "lastName": "admin",
+    "email": "decora@gmail.com",
+    "password": "Decora@Admin1",
+    "role": "admin",
+    "cart": [],
+    "orders": []
+  },
+  {
+    "id": "e873",
+    "fristName": "Shahd",
+    "lastName": "Mohamed",
+    "email": "shahdmohamed@gmail.com",
+    "password": "Decora@Pass1",
+    "role": "user",
+    "cart": [],
+    "orders": [
+      {
+        "id": "ORD-1001",
+        "status": "paid",
+        "createdAt": "2026-02-10T10:00:00Z",
+        "items": [
+          { "productId": "2610", "qty": 1, "unitPrice": 50000, "lineTotal": 50000 },
+          { "productId": "2616", "qty": 1, "unitPrice": 75000, "lineTotal": 75000 }
         ],
-        [
-          "2610",
-          "unpaid"
+        "subtotal": 125000,
+        "tax": 12500,
+        "grandTotal": 137500,
+        "currency": "EGP"
+      },
+      {
+        "id": "ORD-1002",
+        "status": "pending",
+        "createdAt": "2026-02-12T15:30:00Z",
+        "items": [
+          { "productId": "2621", "qty": 2, "unitPrice": 20000, "lineTotal": 40000 },
+          { "productId": "2623", "qty": 1, "unitPrice": 16000, "lineTotal": 16000 }
         ],
-        [
-          "2620",
-          "paid"
+        "subtotal": 56000,
+        "tax": 5600,
+        "grandTotal": 61600,
+        "currency": "EGP"
+      }
+    ]
+  },
+  {
+    "id": "f7c4",
+    "fristName": "Shahd",
+    "lastName": "Mohmed",
+    "email": "shahedmohamed180@gmail.com",
+    "password": "asdfASDF1234!@#$",
+    "role": "user",
+    "cart": [],
+    "orders": [
+      {
+        "id": "ORD-2001",
+        "status": "paid",
+        "createdAt": "2026-02-11T09:20:00Z",
+        "items": [
+          { "productId": "2614", "qty": 1, "unitPrice": 40000, "lineTotal": 40000 },
+          { "productId": "2617", "qty": 2, "unitPrice": 20000, "lineTotal": 40000 }
         ],
-        [
-          "2628",
-          "paid"
-        ]
-      ]
-    }
-  ],
+        "subtotal": 80000,
+        "tax": 8000,
+        "grandTotal": 88000,
+        "currency": "EGP"
+      }
+    ]
+  },
+  {
+    "id": "eada",
+    "fristName": "Manar",
+    "lastName": "Mohmad",
+    "email": "manar@gmail.com",
+    "password": "Manar@gmail.com123",
+    "role": "user",
+    "cart": [],
+    "orders": [
+      {
+        "id": "ORD-3001",
+        "status": "cancelled",
+        "createdAt": "2026-02-13T14:00:00Z",
+        "items": [
+          { "productId": "2625", "qty": 1, "unitPrice": 25000, "lineTotal": 25000 },
+          { "productId": "2629", "qty": 1, "unitPrice": 35000, "lineTotal": 35000 }
+        ],
+        "subtotal": 60000,
+        "tax": 6000,
+        "grandTotal": 66000,
+        "currency": "EGP"
+      }
+    ]
+  },
+  {
+    "id": "e588",
+    "fristName": "Sohila",
+    "lastName": "Ahmed",
+    "email": "sohilaahmed884@gmail.com",
+    "password": "Sohila@123",
+    "role": "user",
+    "cart": ["2610","2611","2612","2610","2613","2615","2616"],
+    "orders": [
+      {
+        "id": "ORD-4001",
+        "status": "paid",
+        "createdAt": "2026-02-14T12:00:00Z",
+        "items": [
+          { "productId": "2610", "qty": 1, "unitPrice": 50000, "lineTotal": 50000 },
+          { "productId": "2620", "qty": 1, "unitPrice": 35000, "lineTotal": 35000 },
+          { "productId": "2628", "qty": 1, "unitPrice": 30000, "lineTotal": 30000 }
+        ],
+        "subtotal": 115000,
+        "tax": 11500,
+        "grandTotal": 126500,
+        "currency": "EGP"
+      },
+      {
+        "id": "ORD-4002",
+        "status": "pending",
+        "createdAt": "2026-02-15T18:00:00Z",
+        "items": [
+          { "productId": "2615", "qty": 1, "unitPrice": 25000, "lineTotal": 25000 },
+          { "productId": "2624", "qty": 2, "unitPrice": 20000, "lineTotal": 40000 }
+        ],
+        "subtotal": 65000,
+        "tax": 6500,
+        "grandTotal": 71500,
+        "currency": "EGP"
+      }
+    ]
+  }
+]
+,
   "products": [
     {
       "id": "2610",
@@ -91,7 +153,8 @@
       "description": "For those who prefer their minimalism with presence, the SLIDE bed offers the same quiet sophistication; now with expanded scale. The perfect foundation for a bedroom that speaks in whispers, not shouts.",
       "rating": "4.0",
       "category": "Bedroom",
-      "image": "https://elance.me/cdn/shop/files/SlideBed.jpg?v=1749551743&width=1000"
+      "image": "https://elance.me/cdn/shop/files/SlideBed.jpg?v=1749551743&width=1000",
+       "onStock": "3"
     },
     {
       "id": "2612",
@@ -100,7 +163,9 @@
       "description": "Crafted from solid wood with a beautifully woven rope back and soft fabric upholstery, the Breeze Sofa offers a perfect balance of comfort and natural texture.",
       "rating": "4.0",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/3_16.png?v=1749773305&width=1200"
+      "image": "https://elance.me/cdn/shop/files/3_16.png?v=1749773305&width=1200",
+       "onStock": "20"
+
     },
     {
       "id": "2613",
@@ -109,7 +174,8 @@
       "description": "Crafted from solid wood with a beautifully woven rope back and soft fabric upholstery, the Breeze Lounge Chair offers a perfect balance of comfort and natural texture.",
       "rating": "4.0",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/p_6.png?v=1749771582&width=1200"
+      "image": "https://elance.me/cdn/shop/files/p_6.png?v=1749771582&width=1200",
+       "onStock": "6"
     },
     {
       "id": "2614",
@@ -118,7 +184,8 @@
       "description": " A fully upholstered arc form that adds a bold, modern statement to any interior.",
       "rating": "4.3",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/Retrofunk_chair.png?v=1723760606&width=1200"
+      "image": "https://elance.me/cdn/shop/files/Retrofunk_chair.png?v=1723760606&width=1200",
+       "onStock": "24"
     },
     {
       "id": "2615",
@@ -127,7 +194,8 @@
       "description": "A larger take on effortless comfort, fully upholstered with smooth, rounded edges.",
       "rating": "4.8",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/Moon2Seaters.jpg?v=1749564989&width=1000"
+      "image": "https://elance.me/cdn/shop/files/Moon2Seaters.jpg?v=1749564989&width=1000",
+     "onStock": "16"
     },
     {
       "id": "2616",
@@ -136,7 +204,18 @@
       "description": "A sculpted, fully upholstered sofa built on a beech-wood frame, elevated with a natural Travertine side table for a refined, modern touch.",
       "rating": "4.5",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/325_U.jpg?v=1749548619&width=1000"
+      "image": "https://elance.me/cdn/shop/files/325_U.jpg?v=1749548619&width=1000",
+       "onStock": "8"
+    },
+    {
+      "id": "2617",
+      "name": "C1 Bedside table",
+      "price": 20000,
+      "description": "Made with natural veneer and soft synthetic leather accents for a smooth, elegant look.",
+      "rating": "4.0",
+      "category": "Table",
+      "image": "https://elance.me/cdn/shop/files/2_0992a240-3a63-429a-914b-baa88a66426c.png?v=1749552589&width=1200",
+       "onStock": "17"
     },
     {
       "id": "2618",
@@ -145,7 +224,8 @@
       "description": "Designed with natural veneer surfaces and soft synthetic leather details. Features a sleek steel handle wrapped in synthetic leather.",
       "rating": "4.0",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/2_f91872b2-abc7-4997-82c8-6373102956d1.png?v=1749560951&width=1200"
+      "image": "https://elance.me/cdn/shop/files/2_f91872b2-abc7-4997-82c8-6373102956d1.png?v=1749560951&width=1200",
+       "onStock": "25"
     },
     {
       "id": "2619",
@@ -154,7 +234,8 @@
       "description": "Features a Natural veneer finish with soft synthetic leather sides. Built with a sturdy wooden base for a warm and elegant look.",
       "rating": "4.3",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/2_fda0bf6d-1eaa-4267-b5cf-0588c9e71763.png?v=1749552482&width=1200"
+      "image": "https://elance.me/cdn/shop/files/2_fda0bf6d-1eaa-4267-b5cf-0588c9e71763.png?v=1749552482&width=1200",
+       "onStock": "14"
     },
     {
       "id": "2620",
@@ -163,15 +244,18 @@
       "description": " Designed with natural veneer surfaces and soft synthetic leather details. Features a sturdy solid wood base and smooth, elegant finish.",
       "rating": "4.5",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/2_06514c45-01af-43f6-ae38-4505e52df137.png?v=1749552285&width=1200"
+      "image": "https://elance.me/cdn/shop/files/2_06514c45-01af-43f6-ae38-4505e52df137.png?v=1749552285&width=1200",
+       "onStock": "24"
     },
     {
       "id": "2621",
       "name": "Grace dining chair",
-      "description": "Solid wood legs with fabric upholstery on the back, seat, and handrests for an elegant, soft-touch feel.",
-      "price": "25000",
+      "price": 20000,
+      "description": " Solid wood legs with fabric upholstery on the back, seat, and handrests for an elegant, soft-touch feel.",
+      "rating": "4.5",
+      "category": "Chair",
       "image": "https://elance.me/cdn/shop/files/p_eb96420c-6da0-4c08-a3b0-d64b07441afc.png?v=1742145684&width=1200",
-      "category": "Chair"
+       "onStock": "5"
     },
     {
       "id": "2622",
@@ -180,7 +264,8 @@
       "description": "Solid wood legs with a fabric-upholstered seat and back for a simple yet charming silhouette.",
       "rating": "4.5",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/creamboucle-104_75e56305-4640-4443-81b6-bcd1c6361384.png?v=1760563236&width=1200"
+      "image": "https://elance.me/cdn/shop/files/creamboucle-104_75e56305-4640-4443-81b6-bcd1c6361384.png?v=1760563236&width=1200",
+       "onStock": "7"
     },
     {
       "id": "2623",
@@ -189,7 +274,8 @@
       "description": " Solid wood legs with the back, seat, and back legs wrapped in premium leather for a luxurious finish.",
       "rating": "4.8",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/HideChair.jpg?v=1749564672&width=1000"
+      "image": "https://elance.me/cdn/shop/files/HideChair.jpg?v=1749564672&width=1000",
+       "onStock": "2"
     },
     {
       "id": "2624",
@@ -198,7 +284,8 @@
       "description": " Solid wood legs with rope-wrapped back and Seat, accented by soft fabric upholstery for added comfort.",
       "rating": "4.7",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/104_314bfbd5-9dfb-4a50-a8fa-e60cd43c1e3a.png?v=1760565948&width=1200"
+      "image": "https://elance.me/cdn/shop/files/104_314bfbd5-9dfb-4a50-a8fa-e60cd43c1e3a.png?v=1760565948&width=1200",
+       "onStock": "17"
     },
     {
       "id": "2625",
@@ -207,7 +294,8 @@
       "description": "Solid wood legs, fabric seat, and aluminum back and handrests wrapped in rope—where structure meets craftsmanship.",
       "rating": "4.8",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/104_7d983387-da21-4c69-9a68-5fb2d9c12770.png?v=1760562830&width=1200"
+      "image": "https://elance.me/cdn/shop/files/104_7d983387-da21-4c69-9a68-5fb2d9c12770.png?v=1760562830&width=1200",
+       "onStock": "14"
     },
     {
       "id": "2626",
@@ -216,7 +304,8 @@
       "description": "Fully upholstered elegance atop slim stainless-steel legs, bringing a polished modern edge to any room.",
       "rating": "3.5",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/olivegreenvelvet.png?v=1760539926&width=1200"
+      "image": "https://elance.me/cdn/shop/files/olivegreenvelvet.png?v=1760539926&width=1200",
+       "onStock": "16"
     },
     {
       "id": "2627",
@@ -225,7 +314,8 @@
       "description": " Simple, soft, and modern, solid wood paired with smooth fabric upholstery.",
       "rating": "3.7",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/Delany_Couch_5b563158-3c4c-4716-8e55-879943b897a6.png?v=1723846377&width=1200"
+      "image": "https://elance.me/cdn/shop/files/Delany_Couch_5b563158-3c4c-4716-8e55-879943b897a6.png?v=1723846377&width=1200",
+       "onStock": "22"
     },
     {
       "id": "2628",
@@ -234,7 +324,8 @@
       "description": "IT IS A SERVICE PRODUCT AUTO-GENERATED BY MAGEWORX APO PRODUCT OPTIONS APP.",
       "rating": "4.0",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/p_-_Muted_Sage_Green.png?v=1748872880&width=1200"
+      "image": "https://elance.me/cdn/shop/files/p_-_Muted_Sage_Green.png?v=1748872880&width=1200",
+       "onStock": "12"
     },
     {
       "id": "2629",
@@ -243,7 +334,8 @@
       "description": "Crafted from solid wood and accented with beautifully woven rope sides, the Breeze Coffee Table brings natural texture and a calming coastal feel to your space.",
       "rating": "3.5",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/WhatsApp_Image_2025-12-14_at_5.40.54_PM.jpg?v=1765984013&width=1200"
+      "image": "https://elance.me/cdn/shop/files/WhatsApp_Image_2025-12-14_at_5.40.54_PM.jpg?v=1765984013&width=1200",
+       "onStock": "27"
     },
     {
       "id": "2630",
@@ -252,92 +344,8 @@
       "description": "Crafted with solid wood legs and a travertine beige or glass top for a clean, contemporary look.",
       "rating": "3.0",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/geometriccoffeetable.png?v=1748971703&width=1200"
-    },
-    {
-      "id": "2631",
-      "name": "Eloise Pouf",
-      "description": "PLEASE DO NOT MODIFY! IT IS A SERVICE PRODUCT AUTO-GENERATED BY MAGEWORX APO PRODUCT OPTIONS APP.",
-      "rating": "4.00",
-      "price": 15000,
-      "image": "https://elance.me/cdn/shop/files/9C64B81C-0CDC-4194-9D7D-16D5AFD9D0AE.png?v=1739398058&width=1200",
-      "category": "Chair"
-    },
-    {
-      "id": "2632",
-      "name": "Nora Chair",
-      "description": "A novelist who pens stories that rock readers to and fro through the waves of emotion.",
-      "rating": "3.5",
-      "price": 25000,
-      "image": "https://elance.me/cdn/shop/files/Nora_chair.png?v=1723761779&width=1200",
-      "category": "Chair"
-    },
-    {
-      "id": "2634",
-      "name": "Maru Maru Bed",
-      "description": "This distinctive bed merges modern minimalism with playful design, boasting a sleek wooden frame perched atop charming spherical legs.",
-      "rating": "3.0",
-      "price": 40000,
-      "category": "Bedroom",
-      "image": "https://elance.me/cdn/shop/files/WhatsApp_Image_2026-01-06_at_9.33.57_PM.jpg?v=1767729195&width=1000"
-    },
-    {
-      "id": "2633",
-      "name": "Sherpa Bed",
-      "description": "a luxurious retreat that combines plush comfort with contemporary style. ",
-      "rating": "3.7",
-      "price": 45000,
-      "category": "Bedroom",
-      "image": "https://elance.me/cdn/shop/files/WhatsApp_Image_2026-01-06_at_9.42.10_PM.jpg?v=1767729490&width=1000"
-    },
-    {
-      "id": "2635",
-      "name": "Dala Daybed",
-      "description": " Its natural grain patterns and warm tones harmonize with any space, creating a serene sanctuary for relaxation",
-      "rating": "4.00",
-      "price": 50000,
-      "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/ChatGPT_Image_Sep_14_2025_10_41_11_AM.png?v=1757835701&width=1000"
-    },
-    {
-      "id": "2636",
-      "name": "Sari Lounge Chair",
-      "description": "the Sari Chair is a quiet statement of form and function",
-      "price": "35000",
-      "image": "https://elance.me/cdn/shop/files/3_5ee1eb38-3320-4123-88ae-2896d326f31c.png?v=1742997973&width=1200",
-      "category": "Chair"
-    },
-    {
-      "id": "3037",
-      "name": "Ensemble L-Shape",
-      "description": "A fully upholstered L-shape design elevated by a Carrara marble tabletop, modern elegance redefined.",
-      "price": "90000",
-      "image": "https://elance.me/cdn/shop/files/darkgreyboucle.png?v=1760555146&width=1200",
-      "category": "Living Room"
-    },
-    {
-      "id": "2638",
-      "name": "Driftwood Sofa",
-      "description": "The Driftwood Sofa captures the organic beauty of weathered shorelines in a functional art piece",
-      "price": "85000",
-      "image": "https://elance.me/cdn/shop/files/p_e51cbe6f-443f-4595-ba5a-46efef38aea2.png?v=1742130901&width=1200",
-      "category": "Living Room"
-    },
-    {
-      "id": "2639",
-      "name": "Splendid Bed",
-      "description": "IT IS A SERVICE PRODUCT AUTO-GENERATED BY MAGEWORX APO PRODUCT OPTIONS APP.",
-      "price": "90000",
-      "image": "https://elance.me/cdn/shop/files/Light_Wood-mirror-shelf.png?v=1748946846&width=1200",
-      "category": "Bedroom"
-    },
-    {
-      "id": "2641",
-      "name": "Atlas Dining Chair",
-      "description": "Crafted entirely from solid wood for a naturally refined and timeless look.",
-      "price": "15000",
-      "image": "https://elance.me/cdn/shop/files/Atlas_Dining_chair.png?v=1723533520&width=1200",
-      "category": "Chair"
+      "image": "https://elance.me/cdn/shop/files/geometriccoffeetable.png?v=1748971703&width=1200",
+       "onStock": "6"
     }
   ]
 }
