@@ -3,8 +3,8 @@ let products = [];
 fetch("dp.json")
   .then(response => response.json())
   .then(data => {
-    products = data.products; 
-    displayProducts(products); 
+    products = data.products;
+    displayProducts(products);
   })
   .catch(error => console.error("Error loading JSON:", error));
 
@@ -12,10 +12,10 @@ const productsContainer = document.getElementById("productsContainer");
 const priceRange = document.getElementById("priceRange");
 const priceValue = document.getElementById("priceValue");
 const filterBtn = document.getElementById("filterBtn");
-let cartCount = 0; 
+let cartCount = 0;
 
 function displayProducts(list) {
-  productsContainer.innerHTML = ""; 
+  productsContainer.innerHTML = "";
   list.forEach(product => {
     const card = document.createElement("div");
     card.className = "col-md-4 mb-4";
@@ -23,7 +23,7 @@ function displayProducts(list) {
     const stars = generateStars(product.rating);
 
     card.innerHTML = `
-      <div class="card h-100 text-center">
+      <div class="card h-100 text-center productCard">
         <img src="${product.image}" class="card-img-top" alt="${product.name}">
         <div class="card-body">
           <h5 class="card-title">${product.name}</h5>
@@ -37,11 +37,25 @@ function displayProducts(list) {
     productsContainer.appendChild(card);
   });
 
+  const productCard = document.querySelectorAll(".productCard");
+  productCard.forEach((ele, i) => {
+    ele.addEventListener("click", () => {
+      const curProduct = {
+        product: list[i]
+      }
+      localStorage.setItem("curProduct", JSON.stringify(curProduct));
+      window.location.href = "description.html";
+    });
+  });
+
   const addButtons = document.querySelectorAll(".add-to-cart");
-  addButtons.forEach(btn => {
+  addButtons.forEach((btn, i) => {
     btn.addEventListener("click", () => {
-      cartCount++;
-      cartCounter.textContent = cartCount;
+      const curProduct = {
+        product: list[i]
+      }
+      localStorage.setItem("curProduct", JSON.stringify(curProduct));
+      window.location.href = "description.html";
     });
   });
 }
@@ -52,8 +66,8 @@ function generateStars(rating) {
   const emptyStar = '<i class="bi bi-star text-warning"></i>';
 
   let starsHTML = "";
-  let fullCount = Math.floor(rating); 
-  let hasHalf = rating % 1 !== 0;     
+  let fullCount = Math.floor(rating);
+  let hasHalf = rating % 1 !== 0;
 
   for (let i = 0; i < fullCount; i++) starsHTML += fullStar;
   if (hasHalf) starsHTML += halfStar;

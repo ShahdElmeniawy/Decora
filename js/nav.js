@@ -68,3 +68,20 @@ function searchData(email) {
     }
   });
 }
+
+let navElements = document.querySelectorAll(".navElements");
+navElements.forEach(el => el.classList.remove("active"));
+if (window.location.pathname.includes("index.html")) {
+  navElements[0].classList.add("active");
+} else if (window.location.pathname.includes("about.html")) {
+  navElements[1].classList.add("active");
+} else if (window.location.pathname.includes("store.html")) {
+  navElements[2].classList.add("active");
+} else if (window.location.pathname.includes("contact.html")) {
+  navElements[3].classList.add("active");
+}
+
+
+if (!window.location.pathname.includes("description.html")) {
+  localStorage.removeItem("curProduct");
+}

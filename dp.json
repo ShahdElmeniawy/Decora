@@ -7,7 +7,9 @@
       "email": "decora@gmail.com",
       "password": "Decora@Admin1",
       "role": "admin",
-      "cart": []
+      "cart": [],
+      "orders": [],
+      "review": []
     },
     {
       "id": "e873",
@@ -16,10 +18,74 @@
       "email": "shahdmohamed@gmail.com",
       "password": "Decora@Pass1",
       "role": "user",
-      "cart": [
-        "1",
-        "3",
-        "6"
+      "cart": [],
+      "orders": [
+        {
+          "id": "ORD-1001",
+          "status": "paid",
+          "createdAt": "2026-02-10T10:00:00Z",
+          "items": [
+            {
+              "productId": "2610",
+              "qty": 1,
+              "unitPrice": 50000,
+              "lineTotal": 50000
+            },
+            {
+              "productId": "2616",
+              "qty": 1,
+              "unitPrice": 75000,
+              "lineTotal": 75000
+            }
+          ],
+          "subtotal": 125000,
+          "tax": 12500,
+          "grandTotal": 137500,
+          "currency": "EGP"
+        },
+        {
+          "id": "ORD-1002",
+          "status": "pending",
+          "createdAt": "2026-02-12T15:30:00Z",
+          "items": [
+            {
+              "productId": "2621",
+              "qty": 2,
+              "unitPrice": 20000,
+              "lineTotal": 40000
+            },
+            {
+              "productId": "2623",
+              "qty": 1,
+              "unitPrice": 16000,
+              "lineTotal": 16000
+            }
+          ],
+          "subtotal": 56000,
+          "tax": 5600,
+          "grandTotal": 61600,
+          "currency": "EGP"
+        }
+      ],
+      "review": [
+        {
+          "productId": "2611",
+          "rate": 4.5,
+          "comment": "The Slide Bed is minimalist and sturdy. Really transforms the bedroom.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2615",
+          "rate": 4.8,
+          "comment": "Moon Sofa is incredibly comfortable and looks great in my living room.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2622",
+          "rate": 4.2,
+          "comment": "Ladder Back Dining Chair has a charming design and solid build.",
+          "date": "Mon Feb 16 2026"
+        }
       ]
     },
     {
@@ -29,7 +95,68 @@
       "email": "shahedmohamed180@gmail.com",
       "password": "asdfASDF1234!@#$",
       "role": "user",
-      "cart": []
+      "cart": [],
+      "orders": [
+        {
+          "id": "ORD-2001",
+          "status": "paid",
+          "createdAt": "2026-02-11T09:20:00Z",
+          "items": [
+            {
+              "productId": "2614",
+              "qty": 1,
+              "unitPrice": 40000,
+              "lineTotal": 40000
+            },
+            {
+              "productId": "2617",
+              "qty": 2,
+              "unitPrice": 20000,
+              "lineTotal": 40000
+            }
+          ],
+          "subtotal": 80000,
+          "tax": 8000,
+          "grandTotal": 88000,
+          "currency": "EGP"
+        },
+        {
+          "status": "paid",
+          "createdAt": "Mon Feb 16 2026 15:35:44 GMT+0200 (Eastern European Standard Time)",
+          "items": [
+            {
+              "productId": "2611",
+              "qty": 2,
+              "unitPrice": 60000,
+              "lineTotal": 120000
+            },
+            {
+              "productId": "2614",
+              "qty": 1,
+              "unitPrice": 40000,
+              "lineTotal": 40000
+            }
+          ],
+          "subtotal": 235000,
+          "tax": 23500,
+          "grandTotal": 258500,
+          "currency": "EGP"
+        }
+      ],
+      "review": [
+        {
+          "productId": "2610",
+          "date": "2026-02-16",
+          "rate": 4,
+          "comment": "It's the most comfortable bed"
+        },
+        {
+          "productId": "2617",
+          "date": "2026-02-16",
+          "rate": 4,
+          "comment": "awesome table"
+        }
+      ]
     },
     {
       "id": "eada",
@@ -38,7 +165,52 @@
       "email": "manar@gmail.com",
       "password": "Manar@gmail.com123",
       "role": "user",
-      "cart": []
+      "cart": [],
+      "orders": [
+        {
+          "id": "ORD-3001",
+          "status": "cancelled",
+          "createdAt": "2026-02-13T14:00:00Z",
+          "items": [
+            {
+              "productId": "2625",
+              "qty": 1,
+              "unitPrice": 25000,
+              "lineTotal": 25000
+            },
+            {
+              "productId": "2629",
+              "qty": 1,
+              "unitPrice": 35000,
+              "lineTotal": 35000
+            }
+          ],
+          "subtotal": 60000,
+          "tax": 6000,
+          "grandTotal": 66000,
+          "currency": "EGP"
+        }
+      ],
+      "review": [
+        {
+          "productId": "2613",
+          "rate": 4.4,
+          "comment": "Breeze Lounge chair is my new favorite spot to read. Very comfortable.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2619",
+          "rate": 4.1,
+          "comment": "R2 Bedside table is well-crafted and the veneer finish is lovely.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2627",
+          "rate": 3.9,
+          "comment": "Delany Couch is simple and modern, but the cushions could use more support.",
+          "date": "Mon Feb 16 2026"
+        }
+      ]
     },
     {
       "id": "e588",
@@ -47,29 +219,86 @@
       "email": "sohilaahmed884@gmail.com",
       "password": "Sohila@123",
       "role": "user",
-      "cart": [
-        "2616",
-        "2610",
-        "2620",
-        "2628"
+      "review": [
+        {
+          "productId": "2610",
+          "rate": 5,
+          "comment": "Best purchase of the year.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2614",
+          "rate": 4.2,
+          "comment": "RetroFunk Chair adds a bold statement to my room. Very eye-catching.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2620",
+          "rate": 4.7,
+          "comment": "R1 Bedside table is elegant and well-built. Exactly what I wanted.",
+          "date": "Mon Feb 16 2026"
+        },
+        {
+          "productId": "2624",
+          "rate": 4.5,
+          "comment": "Mindy Dining Chair is both comfortable and stylish, love the rope detail.",
+          "date": "Mon Feb 16 2026"
+        }
       ],
-      "history": [
-        [
-          "2628",
-          "paid"
-        ],
-        [
-          "2610",
-          "unpaid"
-        ],
-        [
-          "2620",
-          "paid"
-        ],
-        [
-          "2628",
-          "paid"
-        ]
+      "cart": [],
+      "orders": [
+        {
+          "id": "ORD-4001",
+          "status": "paid",
+          "createdAt": "2026-02-14T12:00:00Z",
+          "items": [
+            {
+              "productId": "2610",
+              "qty": 1,
+              "unitPrice": 50000,
+              "lineTotal": 50000
+            },
+            {
+              "productId": "2620",
+              "qty": 1,
+              "unitPrice": 35000,
+              "lineTotal": 35000
+            },
+            {
+              "productId": "2628",
+              "qty": 1,
+              "unitPrice": 30000,
+              "lineTotal": 30000
+            }
+          ],
+          "subtotal": 115000,
+          "tax": 11500,
+          "grandTotal": 126500,
+          "currency": "EGP"
+        },
+        {
+          "id": "ORD-4002",
+          "status": "pending",
+          "createdAt": "2026-02-15T18:00:00Z",
+          "items": [
+            {
+              "productId": "2615",
+              "qty": 1,
+              "unitPrice": 25000,
+              "lineTotal": 25000
+            },
+            {
+              "productId": "2624",
+              "qty": 2,
+              "unitPrice": 20000,
+              "lineTotal": 40000
+            }
+          ],
+          "subtotal": 65000,
+          "tax": 6500,
+          "grandTotal": 71500,
+          "currency": "EGP"
+        }
       ]
     }
   ],
