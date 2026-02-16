@@ -320,7 +320,8 @@
       "description": "For those who prefer their minimalism with presence, the SLIDE bed offers the same quiet sophistication; now with expanded scale. The perfect foundation for a bedroom that speaks in whispers, not shouts.",
       "rating": "4.0",
       "category": "Bedroom",
-      "image": "https://elance.me/cdn/shop/files/SlideBed.jpg?v=1749551743&width=1000"
+      "image": "https://elance.me/cdn/shop/files/SlideBed.jpg?v=1749551743&width=1000",
+       "onStock": "3"
     },
     {
       "id": "2612",
@@ -329,7 +330,9 @@
       "description": "Crafted from solid wood with a beautifully woven rope back and soft fabric upholstery, the Breeze Sofa offers a perfect balance of comfort and natural texture.",
       "rating": "4.0",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/3_16.png?v=1749773305&width=1200"
+      "image": "https://elance.me/cdn/shop/files/3_16.png?v=1749773305&width=1200",
+       "onStock": "20"
+
     },
     {
       "id": "2613",
@@ -338,7 +341,8 @@
       "description": "Crafted from solid wood with a beautifully woven rope back and soft fabric upholstery, the Breeze Lounge Chair offers a perfect balance of comfort and natural texture.",
       "rating": "4.0",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/p_6.png?v=1749771582&width=1200"
+      "image": "https://elance.me/cdn/shop/files/p_6.png?v=1749771582&width=1200",
+       "onStock": "6"
     },
     {
       "id": "2614",
@@ -347,7 +351,8 @@
       "description": " A fully upholstered arc form that adds a bold, modern statement to any interior.",
       "rating": "4.3",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/Retrofunk_chair.png?v=1723760606&width=1200"
+      "image": "https://elance.me/cdn/shop/files/Retrofunk_chair.png?v=1723760606&width=1200",
+       "onStock": "24"
     },
     {
       "id": "2615",
@@ -356,7 +361,8 @@
       "description": "A larger take on effortless comfort, fully upholstered with smooth, rounded edges.",
       "rating": "4.8",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/Moon2Seaters.jpg?v=1749564989&width=1000"
+      "image": "https://elance.me/cdn/shop/files/Moon2Seaters.jpg?v=1749564989&width=1000",
+     "onStock": "16"
     },
     {
       "id": "2616",
@@ -365,7 +371,8 @@
       "description": "A sculpted, fully upholstered sofa built on a beech-wood frame, elevated with a natural Travertine side table for a refined, modern touch.",
       "rating": "4.5",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/325_U.jpg?v=1749548619&width=1000"
+      "image": "https://elance.me/cdn/shop/files/325_U.jpg?v=1749548619&width=1000",
+       "onStock": "8"
     },
     {
       "id": "2617",
@@ -374,7 +381,8 @@
       "description": "Made with natural veneer and soft synthetic leather accents for a smooth, elegant look.",
       "rating": "4.0",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/2_0992a240-3a63-429a-914b-baa88a66426c.png?v=1749552589&width=1200"
+      "image": "https://elance.me/cdn/shop/files/2_0992a240-3a63-429a-914b-baa88a66426c.png?v=1749552589&width=1200",
+       "onStock": "17"
     },
     {
       "id": "2618",
@@ -383,7 +391,8 @@
       "description": "Designed with natural veneer surfaces and soft synthetic leather details. Features a sleek steel handle wrapped in synthetic leather.",
       "rating": "4.0",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/2_f91872b2-abc7-4997-82c8-6373102956d1.png?v=1749560951&width=1200"
+      "image": "https://elance.me/cdn/shop/files/2_f91872b2-abc7-4997-82c8-6373102956d1.png?v=1749560951&width=1200",
+       "onStock": "25"
     },
     {
       "id": "2619",
@@ -392,7 +401,8 @@
       "description": "Features a Natural veneer finish with soft synthetic leather sides. Built with a sturdy wooden base for a warm and elegant look.",
       "rating": "4.3",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/2_fda0bf6d-1eaa-4267-b5cf-0588c9e71763.png?v=1749552482&width=1200"
+      "image": "https://elance.me/cdn/shop/files/2_fda0bf6d-1eaa-4267-b5cf-0588c9e71763.png?v=1749552482&width=1200",
+       "onStock": "14"
     },
     {
       "id": "2620",
@@ -401,7 +411,8 @@
       "description": " Designed with natural veneer surfaces and soft synthetic leather details. Features a sturdy solid wood base and smooth, elegant finish.",
       "rating": "4.5",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/2_06514c45-01af-43f6-ae38-4505e52df137.png?v=1749552285&width=1200"
+      "image": "https://elance.me/cdn/shop/files/2_06514c45-01af-43f6-ae38-4505e52df137.png?v=1749552285&width=1200",
+       "onStock": "24"
     },
     {
       "id": "2621",
@@ -410,7 +421,8 @@
       "description": " Solid wood legs with fabric upholstery on the back, seat, and handrests for an elegant, soft-touch feel.",
       "rating": "4.5",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/p_eb96420c-6da0-4c08-a3b0-d64b07441afc.png?v=1742145684&width=1200"
+      "image": "https://elance.me/cdn/shop/files/p_eb96420c-6da0-4c08-a3b0-d64b07441afc.png?v=1742145684&width=1200",
+       "onStock": "5"
     },
     {
       "id": "2622",
@@ -419,7 +431,8 @@
       "description": "Solid wood legs with a fabric-upholstered seat and back for a simple yet charming silhouette.",
       "rating": "4.5",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/creamboucle-104_75e56305-4640-4443-81b6-bcd1c6361384.png?v=1760563236&width=1200"
+      "image": "https://elance.me/cdn/shop/files/creamboucle-104_75e56305-4640-4443-81b6-bcd1c6361384.png?v=1760563236&width=1200",
+       "onStock": "7"
     },
     {
       "id": "2623",
@@ -428,7 +441,8 @@
       "description": " Solid wood legs with the back, seat, and back legs wrapped in premium leather for a luxurious finish.",
       "rating": "4.8",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/HideChair.jpg?v=1749564672&width=1000"
+      "image": "https://elance.me/cdn/shop/files/HideChair.jpg?v=1749564672&width=1000",
+       "onStock": "2"
     },
     {
       "id": "2624",
@@ -437,7 +451,8 @@
       "description": " Solid wood legs with rope-wrapped back and Seat, accented by soft fabric upholstery for added comfort.",
       "rating": "4.7",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/104_314bfbd5-9dfb-4a50-a8fa-e60cd43c1e3a.png?v=1760565948&width=1200"
+      "image": "https://elance.me/cdn/shop/files/104_314bfbd5-9dfb-4a50-a8fa-e60cd43c1e3a.png?v=1760565948&width=1200",
+       "onStock": "17"
     },
     {
       "id": "2625",
@@ -446,7 +461,8 @@
       "description": "Solid wood legs, fabric seat, and aluminum back and handrests wrapped in rope—where structure meets craftsmanship.",
       "rating": "4.8",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/104_7d983387-da21-4c69-9a68-5fb2d9c12770.png?v=1760562830&width=1200"
+      "image": "https://elance.me/cdn/shop/files/104_7d983387-da21-4c69-9a68-5fb2d9c12770.png?v=1760562830&width=1200",
+       "onStock": "14"
     },
     {
       "id": "2626",
@@ -455,7 +471,8 @@
       "description": "Fully upholstered elegance atop slim stainless-steel legs, bringing a polished modern edge to any room.",
       "rating": "3.5",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/olivegreenvelvet.png?v=1760539926&width=1200"
+      "image": "https://elance.me/cdn/shop/files/olivegreenvelvet.png?v=1760539926&width=1200",
+       "onStock": "16"
     },
     {
       "id": "2627",
@@ -464,34 +481,38 @@
       "description": " Simple, soft, and modern, solid wood paired with smooth fabric upholstery.",
       "rating": "3.7",
       "category": "Living Room",
-      "image": "https://elance.me/cdn/shop/files/Delany_Couch_5b563158-3c4c-4716-8e55-879943b897a6.png?v=1723846377&width=1200"
+      "image": "https://elance.me/cdn/shop/files/Delany_Couch_5b563158-3c4c-4716-8e55-879943b897a6.png?v=1723846377&width=1200",
+       "onStock": "22"
     },
     {
       "id": "2628",
       "name": "Axle armchair",
-      "price": "30000",
+      "price": 30000,
       "description": "IT IS A SERVICE PRODUCT AUTO-GENERATED BY MAGEWORX APO PRODUCT OPTIONS APP.",
       "rating": "4.0",
       "category": "Chair",
-      "image": "https://elance.me/cdn/shop/files/p_-_Muted_Sage_Green.png?v=1748872880&width=1200"
+      "image": "https://elance.me/cdn/shop/files/p_-_Muted_Sage_Green.png?v=1748872880&width=1200",
+       "onStock": "12"
     },
     {
       "id": "2629",
       "name": "Breeze Coffee Table",
-      "price": "35000",
+      "price": 35000,
       "description": "Crafted from solid wood and accented with beautifully woven rope sides, the Breeze Coffee Table brings natural texture and a calming coastal feel to your space.",
       "rating": "3.5",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/WhatsApp_Image_2025-12-14_at_5.40.54_PM.jpg?v=1765984013&width=1200"
+      "image": "https://elance.me/cdn/shop/files/WhatsApp_Image_2025-12-14_at_5.40.54_PM.jpg?v=1765984013&width=1200",
+       "onStock": "27"
     },
     {
       "id": "2630",
       "name": "Geometric Coffee Table",
-      "price": "45000",
+      "price": 45000,
       "description": "Crafted with solid wood legs and a travertine beige or glass top for a clean, contemporary look.",
       "rating": "3.0",
       "category": "Table",
-      "image": "https://elance.me/cdn/shop/files/geometriccoffeetable.png?v=1748971703&width=1200"
+      "image": "https://elance.me/cdn/shop/files/geometriccoffeetable.png?v=1748971703&width=1200",
+       "onStock": "6"
     }
   ]
 }

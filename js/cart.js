@@ -226,7 +226,7 @@ function updateSummary(items) {
 
 function showEmpty() {
   cartItemsContainer.innerHTML = "";
-  document.getElementById("emptyState").style.display = "block";
+  document.getElementById("emptyState").style.display = "flex";
   document.getElementById("subtotal").textContent = money(0);
   document.getElementById("tax").textContent = money(0);
   document.getElementById("grand").textContent = money(0);
@@ -275,7 +275,7 @@ if (applyCouponBtn) {
   if (saved) {
     discountRate = saved.rate || 0;
     couponInput.value = saved.code || "";
-    couponMsg.textContent = `Coupon applied: ${Math.round(discountRate * 100)}% OFF ✅`;
+    couponMsg.textContent = `Coupon applied: ${Math.round(discountRate * 100)}% OFF `;
     couponMsg.style.color = "#c8b27a";
   }
 }

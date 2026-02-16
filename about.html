@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About | Decora</title>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="../css/about.css" />
+
+</head>
+
+<body>
+     <nav class="decora-nav transparent" id="decoraNav">
+        <div class="decora-inner">
+
+            <a href="index.html" class="brand">
+                <!-- <img src="./images/logo.png" alt="Decora Logo" class="brand-logo"> -->
+                <span class="brand-name" style="font-family: 'Italiana', serif; font-size: 30px;">Decora</span>
+            </a>
+
+            <ul class="menu">
+                <li><a class="active" href="./index.html">HOME <span class="chev">›</span></a></li>
+                <li><a href="./about.html">ABOUT <span class="chev">›</span></a></li>
+                <li><a href="./store.html">STORE <span class="chev">›</span></a></li>
+                <li><a href="./contact.html">CONTACTS <span class="chev">›</span></a></li>
+            </ul>
+
+            <div class="actions">
+                <div class="nav-search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search" aria-label="Search">
+                </div>
+
+
+                <a href="./login.html" class="action" id="logLink">
+                    <i class="bi bi-person"></i>
+                    <span id="logBtn">login</span>
+                </a>
+
+                <a href="#" class="action" id="logOutBtn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>logOut</span>
+                </a>
+
+                <a href="./cart.html" class="action cart">
+                    <i class="bi bi-bag"></i>
+                    <span>cart</span>
+                    <span class="badge" id="cartCounter">0</span>
+                </a>
+            </div>
+
+            <button class="menu-btn" id="openMenu" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <aside class="menu-panel" id="menuPanel" aria-label="Mobile menu">
+            <div class="panel-top">
+                <div class="panel-brand">
+                    <!-- <img src="./images/logo.png" alt="Decora" /> -->
+                    <div class="panel-name" style="font-family: 'Italiana', serif; font-size: 20px;">Decora</div>
+                </div>
+
+                <button class="close-btn" id="closeMenu" aria-label="Close menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+
+            <nav class="panel-links">
+                <a href="./index.html" class="panel-link active"><span>Home</span><span class="plus">+</span></a>
+                <a href="./about.html" class="panel-link"><span>About</span><span class="plus">+</span></a>
+                <a href="./store.html" class="panel-link"><span>Store</span><span class="plus">+</span></a>
+                <a href="./contact.html" class="panel-link"><span>Contacts</span></a>
+            </nav>
+
+            <div class="panel-icons">
+                <a href="./cart.html" class="mini cart-mini" aria-label="Cart">
+                    <i class="bi bi-bag"></i>
+                    <span class="mini-badge" id="cartCounter">0</span>
+                </a>
+
+                <a href="./login.html" class="mini" aria-label="Login" id="logLink">
+                    <i class="bi bi-person"></i>
+                </a>
+
+            </div>
+
+            <div class="panel-search">
+                <input type="text" placeholder="Search" />
+                <button aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </aside>
+    </div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-top">
+                <span class="badge-brand">Decora</span>
+                <span class="muted">• About us</span>
+            </div>
+
+            <h1 class="hero-title">About Decora</h1>
+
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="/">Home</a>
+                <span class="sep">/</span>
+                <span class="active">About</span>
+            </nav>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div class="cardx media-card">
+                    <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1400&q=70"
+                        alt="About Decora" />
+                </div>
+
+                <div>
+                    <div class="kicker">WHO WE ARE</div>
+                    <h2 class="h2">Crafting premium furniture with a modern touch.</h2>
+                    <p class="muted">
+                        At Decora, we blend craftsmanship and contemporary design to create furniture that elevates
+                        every space.
+                        Our focus is quality materials, refined finishing, and timeless comfort.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="counter">
+                            <div class="num">12+</div>
+                            <div class="lbl">Years Experience</div>
+                        </div>
+                        <div class="counter">
+                            <div class="num">4.8</div>
+                            <div class="lbl">Avg. Rating</div>
+                        </div>
+                        <div class="counter">
+                            <div class="num">2K+</div>
+                            <div class="lbl">Happy Clients</div>
+                        </div>
+                        <div class="counter">
+                            <div class="num">150+</div>
+                            <div class="lbl">Products</div>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <a class="btn btn-brand" href="/shop">Explore Products</a>
+                        <a class="btn btn-outline" href="/contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section pt-0">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="ico">01</div>
+                    <h3 class="h3">Premium Materials</h3>
+                    <p class="muted">Solid wood, durable fabrics, and carefully selected finishes.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="ico">02</div>
+                    <h3 class="h3">Modern Design</h3>
+                    <p class="muted">Minimal silhouettes that fit modern and classic interiors.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="ico">03</div>
+                    <h3 class="h3">Quality Assurance</h3>
+                    <p class="muted">Every piece is checked for comfort, stability, and finish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section pt-0">
+        <div class="container">
+            <div class="cardx pad-lg">
+                <div class="grid-2 align-center">
+                    <div>
+                        <div class="kicker">HOW WE WORK</div>
+                        <h2 class="h2">From idea to installation.</h2>
+                        <p class="muted">A simple process that guarantees consistent results.</p>
+                    </div>
+
+                    <div class="process-grid">
+                        <div class="feature">
+                            <div class="ico">A</div>
+                            <div class="title-strong">Consult</div>
+                            <p class="muted">Choose style, size, and materials.</p>
+                        </div>
+
+                        <div class="feature">
+                            <div class="ico">B</div>
+                            <div class="title-strong">Build</div>
+                            <p class="muted">Crafted with precision &amp; care.</p>
+                        </div>
+
+                        <div class="feature">
+                            <div class="ico">C</div>
+                            <div class="title-strong">Deliver</div>
+                            <p class="muted">Safe delivery and setup.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <div class="kicker">OUR TEAM</div>
+                    <h2 class="h2">Meet the makers</h2>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <div class="cardx team-card">
+                    <img src="https://images.unsplash.com/photo-1520975958225-72bbf87c1a0a?auto=format&fit=crop&w=900&q=70"
+                        alt="Ahmed">
+                    <div class="team-info">
+                        <div class="name">Ahmed</div>
+                        <div class="role muted">Production Lead</div>
+                    </div>
+                </div>
+
+                <div class="cardx team-card">
+                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=70"
+                        alt="Mona">
+                    <div class="team-info">
+                        <div class="name">Mona</div>
+                        <div class="role muted">Interior Consultant</div>
+                    </div>
+                </div>
+
+                <div class="cardx team-card">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=70"
+                        alt="Omar">
+                    <div class="team-info">
+                        <div class="name">Omar</div>
+                        <div class="role muted">Quality Specialist</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-grid">
+                <div>
+                    <h2 class="h2">Ready to upgrade your space?</h2>
+                    <p class="muted">Explore our collections or get in touch for recommendations.</p>
+                </div>
+                <div class="cta-action">
+                    <a class="btn btn-brand" href="/shop">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="decora-footer">
+        <div class="footer-inner">
+
+
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <!-- <img src="./images/logo.png" alt="Decora" class="footer-logo"> -->
+                    <div class="footer-brand-name">DECORA</div>
+                </div>
+
+                <h2 class="footer-title">
+                    DECORA FOR ELEGANT <br>
+                    INTERIORS
+                </h2>
+
+                <p class="footer-desc">
+                    Modern design pieces and curated collections that blend smoothly into
+                    contemporary living spaces.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-mid">
+                <h3 class="footer-head">EXPLORE</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html"><span class="arrow">›</span> Home</a></li>
+                    <li><a href="#"><span class="arrow">›</span> About</a></li>
+                    <li><a href="./store.html"><span class="arrow">›</span> Store</a></li>
+                    <li><a href="./contact.html"><span class="arrow">›</span> Contacts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h3 class="footer-head">CONTACT INFO</h3>
+
+                <div class="info-row">
+                    <div class="info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div class="info-text">
+                        <div class="info-label">CENTRAL OFFICE:</div>
+                        <div class="info-value">Cairo, Egypt</div>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-icon"><i class="bi bi-telephone-fill"></i></div>
+                    <div class="info-text">
+                        <div class="info-label">PHONES:</div>
+                        <div class="info-value">+20 100 000 0000</div>
+                        <div class="info-value">+20 111 111 1111</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <span>Decora © All Rights Reserved - 2026</span>
+                <a href="#" class="purchase-link">Purchase</a>
+            </div>
+        </div>
+
+        <a href="#" class="to-top" aria-label="Back to top">
+            <i class="bi bi-arrow-up"></i>
+        </a>
+    </footer>
+
+</body>
+
+</html>

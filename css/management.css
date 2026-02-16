@@ -17,3 +17,99 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+.gories {
+    background: #0f1412;
+    height: 75vh;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    opacity: 90%;
+}
+
+.tble, .chir, .beeedroom, .livingRoom {
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dash {
+    background: #fff;
+}
+
+input {
+    font-family: sans-serif;
+}
+
+.add-Item{
+    text-align: left;
+    font-size: 20px;
+    color: #0f1412;
+}
+
+.add-Item:hover {
+    color: #EDA35A;
+}
+
+.btnItem {
+    background: #0f1412;
+    color: #fff;
+    opacity: 90%;
+}
+
+.btnItem:hover {
+    color: #EDA35A;
+}
+
+.dropdowmcategories {
+    margin: 5px;
+}
+
+.itemsCard {
+    color: #0f1412;
+}
+
+.error-msg {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.9em;
+}
+
+.cardmange {
+    font-family: sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.cardmange:hover {
+    transform: translateY(-10px);
+}
+
+
+.cardmange-title {
+    color: #0f1412;
+    font-weight: bold;
+}
+
+.editBtn {
+  background-color: #0f1412 !important;
+  color: #fff !important;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  width: 45%;
+}
+
+.editBtn:hover {
+    background-color: darkslategrey !important; 
+}
+
+.delBtn {
+  background-color: #EDA35A !important;
+  color: #fff !important;
+  padding: 5px 10px;
+  border-radius: 4px;
+    border: none;
+    width: 48%;
+}
+
