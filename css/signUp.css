@@ -9,7 +9,7 @@ body {
 }
 
 .signup-section {
-    background-color: rgba(50, 63, 7, 0.8);
+    background-color:#0f1412;
     color: #fff;
     padding: 2rem;
     font-size: 16px;
@@ -51,14 +51,14 @@ body {
 
 .signup-btn {
     background-color: #fff;
-    color: #323F07;
+    color: #0f1412;
     border-radius: 32px;
     font-size: 20px;
 }
 
 
 .signup-btn:hover {
-    background-image: linear-gradient(to right, #323F07, #cecece);
+    background-image: linear-gradient(to right, #0f1412, #cecece);
     border: none;
     color: white;
 }

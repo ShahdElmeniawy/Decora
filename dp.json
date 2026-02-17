@@ -96,6 +96,10 @@
       "password": "asdfASDF1234!@#$",
       "role": "user",
       "cart": [
+        "2611",
+        "2610",
+        "2612",
+        "2615",
         "2611"
       ],
       "orders": [
@@ -150,9 +154,27 @@
           "items": [
             {
               "productId": "2611",
-              "qty": 1,
+              "qty": 2,
               "unitPrice": 60000,
-              "lineTotal": 60000
+              "lineTotal": 120000
+            },
+            {
+              "productId": "2610",
+              "qty": 1,
+              "unitPrice": 50000,
+              "lineTotal": 50000
+            },
+            {
+              "productId": "2612",
+              "qty": 1,
+              "unitPrice": 35000,
+              "lineTotal": 35000
+            },
+            {
+              "productId": "2615",
+              "qty": 1,
+              "unitPrice": 25000,
+              "lineTotal": 25000
             }
           ],
           "subtotal": 60000,
@@ -173,6 +195,12 @@
           "date": "2026-02-16",
           "rate": 4,
           "comment": "awesome table"
+        },
+        {
+          "productId": "2611",
+          "date": "2026-02-17",
+          "rate": 1,
+          "comment": "from sohila"
         }
       ]
     },
@@ -344,6 +372,41 @@
           "rate": 4.5,
           "comment": "Mindy Dining Chair is both comfortable and stylish, love the rope detail.",
           "date": "Mon Feb 16 2026"
+        }
+      ]
+    },
+    {
+      "id": "d274",
+      "fristName": "asmaa",
+      "lastName": "soliman",
+      "email": "asmaasoliman191999@gmail.com",
+      "password": "Ad3**we145",
+      "role": "user",
+      "cart": [],
+      "orders": [
+        {
+          "status": "paid",
+          "createdAt": "Tue Feb 17 2026 12:52:52 GMT+0200 (Eastern European Standard Time)",
+          "items": [
+            {
+              "productId": "2610",
+              "qty": 1,
+              "unitPrice": 50000,
+              "lineTotal": 50000
+            }
+          ],
+          "subtotal": 50000,
+          "tax": 5000,
+          "grandTotal": 55000,
+          "currency": "EGP"
+        }
+      ],
+      "review": [
+        {
+          "productId": "2611",
+          "date": "2026-02-17",
+          "rate": 5,
+          "comment": "great project"
         }
       ]
     }

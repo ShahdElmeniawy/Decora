@@ -43,6 +43,16 @@ if (curUser) {
   logOutBtn.style.display = "block";
   logLink.href = "./index.html";
 }
+const currentUrl = window.location.href;
+
+if (
+  curUser &&
+  curUser.email === "decora@gmail.com" &&
+  ["description", "cart", "store"].some(page => currentUrl.includes(page))
+) {
+  window.location.href = "admin.html";
+}
+
 logOutBtn.addEventListener("click", () => {
   localStorage.removeItem("loggedUser");
   logElement.innerHTML = "logIn"

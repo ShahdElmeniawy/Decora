@@ -367,6 +367,10 @@ body {
   font-weight: 600;
 }
 
+.modal{
+  top: 60px;
+}
+
 .card-icons img.active {
   opacity: 1;
 }

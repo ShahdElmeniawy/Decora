@@ -30,7 +30,6 @@ function displayProducts(list) {
           <div class="rating">${stars}</div>
           <p class="card-text"> ${product.price} EGP </p>
           <small class="text-muted">${product.category}</small><br>
-          <button class="btn btn-cart mt-2 add-to-cart">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
         </div>
       </div>
     `;

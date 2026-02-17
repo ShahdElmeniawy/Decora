@@ -25,7 +25,7 @@
             </a>
 
             <ul class="menu">
-              
+
                 <li><a class="active navElements" href="./index.html">HOME <span class="chev">›</span></a></li>
                 <li><a class="navElements" href="./about.html">ABOUT <span class="chev">›</span></a></li>
                 <li><a class="navElements" href="./store.html">STORE <span class="chev">›</span></a></li>
@@ -178,10 +178,28 @@
     <div class="modal fade" id="paymentModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Order Details</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="paymentForm" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Customer Number</label>
+                            <input type="text" class="form-control" id="customerNumber" required
+                                placeholder="012345678910">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label">Customer Address</label>
+                            <input type="text" class="form-control" id="customerAddress" placeholder="Egypt, Ciro">
+                        </div>
+
+                    </form>
+                </div>
 
                 <div class="modal-header">
                     <h5 class="modal-title">Payment Details</h5>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
                 <div class="modal-body">

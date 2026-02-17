@@ -60,7 +60,7 @@ function normalizeStatus(st) {
 }
 
 function escapeQuotes(text) {
-  
+
   return String(text || "").split('"').join("&quot;");
 }
 
@@ -116,7 +116,7 @@ function getData() {
       if (err2) return console.log(err2);
 
       USERS = users || [];
-      display(); 
+      display();
     });
   });
 }
@@ -161,7 +161,7 @@ function computePaidStats(users) {
 
 function display() {
   statProducts.textContent = String(PRODUCTS.length);
-  statUsers.textContent = String(USERS.length);
+  statUsers.textContent = String(USERS.length - 1);
 
   let paidInfo = computePaidStats(USERS);
   statPaidItems.textContent = String(paidInfo.paidItemsCount);
@@ -220,7 +220,7 @@ function displayProducts(list) {
   productsBody.innerHTML = html || `
     <tr><td colspan="6" style="padding:18px;color:rgba(233,225,211,.65)">No products found.</td></tr>
   `;
-  
+
 }
 
 
@@ -274,6 +274,7 @@ function displayUsers(users) {
     let ordersCount = Array.isArray(u.orders) ? u.orders.length : 0;
 
     let paidAgg = aggregateUserPaid(u);
+    if (u.email == "decora@gmail.com") continue;
 
     html += `
       <tr>
